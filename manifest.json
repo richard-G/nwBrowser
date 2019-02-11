@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Networking Water",
+  "short_name": "Networking Water",
+  "version": "com.NetworkingWater.NWData",
+  "description": "Data aggregator application for the monitoring of water and power supply services.",
+  "author": "Networking Water",
+  "icons": [],
+  "start_url": "index.html",
+  "theme_color": "#ee6e73"
+}

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html> 
+
+<head>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+
+	<!--favicon info-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+    <script type="text/javascript" src="../js/cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/breakInService.js"></script>
+    <script type="text/javascript" src="../js/createAnAccount.js"></script>
+
+    <div class="header">
+        <h1>Log Data</h1>  
+    </div>
+
+
+    <div class="tab">
+        <a href='../index.html'><button class="tab_btn">Home</button></a>
+        <a href="whoWeAre.html"><button class="tab_btn">Who We Are</button></a>
+        <a href="takePart.html"><button class="tab_btn">How to Take Part</button></a>
+        <a href="whyGetInvolved.html"><button class="tab_btn">Why Get Involved</button></a>
+        <a href="supportUs.html"><button class="tab_btn">Support Us</button></a>
+        <a onclick="openWeb()"><button class="tab_btn">Our Website</button></a>
+    </div>
+
+    <div class="text">
+    	<p>
+    		This page can be used to log your water and power supply performances over the day. Please visit our <b>take part</b> page before logging data!
+    	</p>
+    	<p>
+    		Press the appropriate buttons for both water and for electricity service performance. If there was a period of less than normal performance, tell us at what time you noticed it, and at what time (if at all) it came back.
+    	</p>
+    	<p class="text_title">
+    		Water Service
+    	</p>
+    	<p> 
+    		If you've experienced no interruptions of water supply since your last log, press the <span style="color:green">green</span> button.
+    	</p>
+    	<p>
+    		If you've experienced a period of reduction in the water pressure or quality, press the <span style="color:orange">orange</span> button.
+    	</p>
+    	<p> 
+    		If you've experienced a period of no water at all, press the <span style="color:red">red</span> button.
+    	</p>
+
+    	<button id="signalWG" class="btn_green"></button>
+    	<button id="signalWO" class="btn_orange"></button>
+    	<button id="signalWR" class="btn_red"></button>
+
+    	<p class="text_title">
+    		Electricity Service   <!-- power or electricity? -->
+    	</p>
+    	<p>
+    		If you've experienced no breaks in your power supply since your last log, press the <span style="color:green">green</span> button.
+    	</p>
+    	<p>
+    		If you've experienced an electricy cut from the municipality electricty, but you own a private supply of power (such as a generator), press the <span style="color:orange">orange</span> button
+    	</p>
+    	<p>
+    		If you've experienced an electricty cut from the municipality electricity, and you don't own a generator, press the <span style="color:red">red</span> button.
+    	</p>
+    	<button id="signalEG" class="btn_green"></button>
+    	<button id="signalEO" class="btn_orange"></button>
+    	<button id="signalER" class="btn_red"></button>
+    </div>
+
+	<div id="modalWR" class="modal">
+		<div class="modalContent">
+			<span id="closeWR" class="close">&times;</span>
+			<form id="WRForm" onsubmit="formSubmit(event, 'WRForm', 'modalWR', 'cbWR')">
+				<fieldset>
+					<legend>Water Service, Red:</legend>
+					Name: <br>
+					<input type="text" id="hidden_firstName" name="firstName" value="" required> <br>
+					Last name: <br>
+					<input type="text" id="hidden_lastName" name="lastName" value="" required> <br><br>
+
+					Where is your water coming from? <br>
+					<input type="radio" id="municipalWR" name="municipalWR" value="yes" onchange="handleChange()" required>Municipal <br>
+					<input type="radio" name="municipalWR" value="no" onchange="handleChange()">Other (please specify below) <br>
+
+					<div id="notMunWR">
+						<input type="text" name="sourceWR" id="sourceWR" value="" required>
+					</div>
+
+					<br><br>
+
+
+					At what time was the interruption noticed? <br>
+					<input type="text" name="starttimeWR" placeholder="e.g. '19:15'"> <br>
+					Has the water supply come back? <br>
+					<input type="radio" onchange="handleChange()" value="yes" name="backyetWR" id="backyetWR">Yes
+					<input type="radio" onchange="handleChange()" value="no" name="backyetWR" id="backyetWRn">No<br>
+
+					<div id="backNowWR">
+					At what time did the water come back? <br>
+					<input type="text" name="endtimeWR" id="endtimeWR" placeholder="e.g. '19:15'"> <br> 
+					</div> <br>
+					
+					<!--<input type="hidden" id="hidden_firstName" name="firstName" value="n/a">
+					<input type="hidden" id="hidden_lastName" name="lastName" value="n/a">-->
+					<input type="hidden" id="hidden_address" name="address" value="n/a">
+					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
+					<input type="hidden" id="hidden_country" name="country" value="nepal">
+
+
+					<input type="hidden" name="application" value="webEN">
+					<input type="hidden" name="buttonPicked" value="waterRed">
+					<input type="hidden" name="ID" id="ID" value="">
+					<input type="hidden" name="timestamp" id="timestamp" value="">
+					<label id="cbWR">
+					<input type="submit" value="Submit!" class="btn"></label>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div id="modalWO" class="modal">
+		<div class="modalContent">
+			<span id="closeWO" class="close">&times;</span>
+			<form id="WOForm" onsubmit="formSubmit(event, 'WOForm', 'modalWO', 'cbWO')">
+				<fieldset>
+					<legend>Water Service, Orange:</legend>
+					Name: <br>
+					<input type="text" id="hidden_firstName" name="firstName" value="" required> <br>
+					Last name: <br>
+					<input type="text" id="hidden_lastName" name="lastName" value="" required> <br><br>
+
+					Where is your water coming from? <br>
+					<input type="radio" id="municipalWO" name="municipalWO" value="yes" onchange="handleChange()" required>Municipal <br>
+					<input type="radio" name="municipalWO" value="no" onchange="handleChange()">Other (please specify below) <br>
+
+					<div id="notMunWO">
+						<input type="text" name="sourceWO" id="sourceWO" value="" required>
+					</div>
+					<br><br>
+
+					Did you experience a reduction in pressure, or lower water quality? <br>
+					<input type="radio" onchange="handleChange()" name="typeWO" value="redP" id="redP">Reduction in pressure <br>
+					<input type="radio" onchange="handleChange()" name="typeWO" value="redQ" id="redQ">Lower water quality <br>
+					<input type="radio" onchange="handleChange()" name="typeWO" value="PandQ" id ="PandQ">Both <br>
+					At what time was this noticed? <br>
+					<input type="text" name="starttimeWO" placeholder="e.g. '19:15'"> <br>
+					Is your water supply performing normally now? <br> <!-- if yes, just endtimeWO required-->
+					<input type="radio" onchange="handleChange()" name="backyetWO" value="yes" id="backyetWO">Yes
+					<input type="radio" onchange="handleChange()" name="backyetWO" value="no" id="backyetWOn">No <br> <!-- if no, ask about color/time to fill-->
+
+					<div id="lowPressure">
+						How long does it take to fill a 500ml container with water? <br>       
+						<input type="text" name="timeTaken" id="timeTaken"> <br>
+					</div>
+
+					<div id="lowQual"> 
+						In what ways is the water of low quality? (select all that apply) <br>   
+						<input type="checkbox" name="tasteB" id="tasteB" value="taste">Taste  <br>
+						<input type="checkbox" name="smellB" id="smellB" value="smell">Smell <br>
+						<input type="checkbox" name="appearanceB" id="appearanceB" value="appearance">Appearance<br> 
+						Tell us more about the water quality (optional): <br>
+						<input type="text" name="descRedQ" id="descRedQ" value=""> <br>
+					</div> 
+
+					<div id="backNowWO">
+					At what time did the water come back? <br>
+					<input type="text" name="endtimeWO" id="endtimeWO" placeholder="e.g. '19:15'">
+					</div>
+
+					<br>
+		
+					<!--<input type="hidden" id="hidden_firstName" name="firstName" value="n/a">
+					<input type="hidden" id="hidden_lastName" name="lastName" value="n/a">-->
+					<input type="hidden" id="hidden_address" name="address" value="n/a">
+					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
+					<input type="hidden" id="hidden_country" name="country" value="nepal">
+
+
+					<input type="hidden" name="application" value="webEN">
+					<input type="hidden" name="buttonPicked" value="waterOrange">
+					<input type="hidden" name="ID" value="">
+					<input type="hidden" name="timestamp" id="timestamp" value="">
+					<label id="cbWO">
+					<input type="submit" value="Submit!" class="btn"></label>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div id="modalWG" class="modal">
+		<div class="modalContent">
+			<span id="closeWG" class="close">&times;</span>
+			<form id="WGForm" onsubmit="formSubmit(event, 'WGForm', 'modalWG', 'cbWG')">
+				<fieldset>
+					<legend>Water Service, Green:</legend>
+					Name: <br>
+					<input type="text" id="hidden_firstName" name="firstName" value="" required> <br>
+					Last name: <br>
+					<input type="text" id="hidden_lastName" name="lastName" value="" required> <br><br>
+
+					Where is your water coming from? <br>
+					<input type="radio" id="municipalWG" name="municipalWG" value="yes" onchange="handleChange()" required>Municipal <br>
+					<input type="radio" name="municipalWG" value="no" onchange="handleChange()">Other (please specify below) <br>
+
+					<div id="notMunWG">
+						<input type="text" name="sourceWG" id="sourceWG" value="" required>
+					</div>
+ 					<br><br>
+
+					Please press submit to confirm that there has been an uninterrupted water service since last log. <br><br>
+					
+					<!-- edited for web -->
+					<input type="hidden" id="hidden_address" name="address" value="n/a">
+					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
+					<input type="hidden" id="hidden_country" name="country" value="nepal">
+				
+					<input type="hidden" name="application" value="webEN">
+					<input type="hidden" name="buttonPicked" value="waterGreen">
+					<input type="hidden" name="ID" value="error">
+					<input type="hidden" name="timestamp" id="timestamp" value="error">
+					<label id="cbWG">
+					<input type="submit" value="Submit!" class="btn"></label>
+				</fieldset>
+			</form>
+		</div>
+	</div>      
+
+	<div id="modalER" class="modal">
+		<div class="modalContent">
+			<span id="closeER" class="close">&times;</span>
+			<form id="ERForm" onsubmit="formSubmit(event, 'ERForm', 'modalER', 'cbER')">
+				<fieldset>
+					<legend>Power Service, Red:</legend>
+					Name: <br>
+					<input type="text" id="hidden_firstName" name="firstName" value="" required> <br>
+					Last name: <br>
+					<input type="text" id="hidden_lastName" name="lastName" value="" required> <br><br>
+
+
+					At what time was the power cut noticed? <br>
+					<input type="text" name="starttimeER" placeholder="e.g. '19:15'"> <br>
+					Has the power come back yet? <br>
+					<input type="radio" onchange="handleChange()" name="backyetER" id="backyetER" value="yes">Yes
+					<input type="radio" onchange="handleChange()" name="backyetER" value="no">No<br>
+
+					Did you notice a water cut at this time too? <br>
+					<input type="radio" name="wcTooER" id="wcTooER" value="yes">Yes
+					<input type="radio" name="wcTooER" value="no">No <br>
+
+					<div id="backNowER">
+					At what time did the power come back? <br> 
+					<input type="text" name="endtimeER" id="endtimeER" placeholder="e.g. '19:15'"><br> </div> <br>
+
+					<!--<input type="hidden" id="hidden_firstName" name="firstName" value="n/a">
+					<input type="hidden" id="hidden_lastName" name="lastName" value="n/a">-->
+					<input type="hidden" id="hidden_address" name="address" value="n/a">
+					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
+					<input type="hidden" id="hidden_country" name="country" value="nepal">
+
+					<input type="hidden" name="application" value="webEN">
+					<input type="hidden" name="buttonPicked" value="powerRed">
+					<input type="hidden" name="ID" value="">
+					<input type="hidden" name="timestamp" id="timestamp" value="">
+					<label id="cbER">
+					<input type="submit" value="Submit!" class="btn"></label>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div id="modalEO" class="modal">
+		<div class="modalContent">
+			<span id="closeEO" class="close">&times;</span>
+			<form id="EOForm" onsubmit="formSubmit(event, 'EOForm', 'modalEO', 'cbEO')">
+				<fieldset>
+					<legend>Power Service, Orange:</legend>
+					Name: <br>
+					<input type="text" id="hidden_firstName" name="firstName" value="" required> <br>
+					Last name: <br>
+					<input type="text" id="hidden_lastName" name="lastName" value="" required> <br><br>
+
+
+					At what time was the power cut noticed? <br>
+					<input type="text" name="starttimeEO" placeholder="e.g. '19:15'"> <br>
+					Is your power supply performing normally now? <br>
+					<input type="radio" onchange="handleChange()" name="backyetEO" value="yes" id="backyetEO" >Yes
+					<input type="radio" onchange="handleChange()" name="backyetEO" value="no">No <br>
+
+					Did you notice a water cut at this time too? <br>
+					<input type="radio" name="wcTooEO" id="wcTooEO" value="yes">Yes
+					<input type="radio" name="wcTooEO" value="no">No <br>
+
+					<div id="backNowEO">
+					At what time did the power come back? <br>
+					<input type="text" name="endtimeEO" id="endtimeEO" placeholder="e.g. '19:15'"> <br> </div> <br>
+
+					<!--<input type="hidden" id="hidden_firstName" name="firstName" value="n/a">
+					<input type="hidden" id="hidden_lastName" name="lastName" value="n/a">-->
+					<input type="hidden" id="hidden_address" name="address" value="n/a">
+					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
+					<input type="hidden" id="hidden_country" name="country" value="nepal">
+
+					<input type="hidden" name="application" value="webEN">
+					<input type="hidden" name="buttonPicked" value="powerOrange">
+					<input type="hidden" name="ID" value="">
+					<input type="hidden" name="timestamp" id="timestamp" value="">
+					<label id="cbEO">
+					<input type="submit" value="Submit!" class="btn"></label>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div id="modalEG" class="modal">
+		<div class="modalContent">
+			<span id="closeEG" class="close">&times;</span>
+			<form id="EGForm" onsubmit="formSubmit(event, 'EGForm', 'modalEG', 'cbEG')">
+				<fieldset>
+					<legend>Power Service, Green:</legend> <!-- maybe additional input here? -->
+					Name: <br>
+					<input type="text" id="hidden_firstName" name="firstName" value="" required> <br>
+					Last name: <br>
+					<input type="text" id="hidden_lastName" name="lastName" value="" required> <br><br>
+
+
+					Please press submit to confirm that there has been an uninterrupted power service since last log. <br><br>
+
+					<!--<input type="hidden" id="hidden_firstName" name="firstName" value="n/a">
+					<input type="hidden" id="hidden_lastName" name="lastName" value="n/a">-->
+					<input type="hidden" id="hidden_address" name="address" value="n/a">
+					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
+					<input type="hidden" id="hidden_country" name="country" value="nepal">
+
+					<input type="hidden" name="application" value="webEN">
+					<input type="hidden" name="buttonPicked" value="powerGreen">
+					<input type="hidden" name="ID" value="">
+					<input type="hidden" name="timestamp" id="timestamp" value="">
+					<label id="cbEG">
+					<input type="submit" value="Submit!" class="btn"></label>
+				</fieldset>
+			</form>
+		</div>
+	</div>        
+
+    <script type="text/javascript">
+        //app.initialize();
+        initialize(); //taken out for web
+    </script>
+
+</body>
+
+</html>

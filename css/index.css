@@ -1,0 +1,391 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Arial, Helvetica, sans-serif;
+    font-size:14px;
+    color:#FFFFFF;
+    text-transform:uppercase;
+    margin: 0px;
+    background:url(../img/background4.png) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-y: hidden;   /* this makes scroll work on web, not on app */
+   /* background-position: 50% 50%;*/
+}
+
+html {
+    height: 100%;
+    overflow-y: hidden;
+    min-height: 100%;
+}    /*this part needs to be checked */
+
+.frontpage {
+    min-height: 100%;
+    /*background-attachment: fixed;*/
+    margin: 0px;
+    overflow: auto;
+    background:url(../img/watervalve.jpg) no-repeat center center;  /*moved fixed to bottom, last rule*/
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    /*height: 100vh;*/
+    /*height: 100%;
+    overflow-y: hidden;*/
+}
+
+.splash {
+/*    background:url(../img/watervalve.jpg) no-repeat center center fixed;
+    background-repeat: no-repeat;*/
+    background-position: center center; 
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+/*    margin-left: -8px; 
+    margin-top: -8px; */    /* this is required as the body has margins of 8px */
+   /* not too sure why this works */
+/*    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;  */    /* need to separate background from this class */
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+/*    background-color: #2F2F2F;*/
+    background:url('../img/background4.png') no-repeat center fixed;
+    background-size: cover;
+    width: 80vw;
+    overflow: auto
+    z-index: 1;
+    margin-top: calc(-100vh + (60px));   /* not clean but probably okay, USED TO BE 100px!, beta */
+    margin-left: 10vw;
+    margin-right: 10vw;
+    overflow: auto;
+    max-height: calc(100vh - (140px)); /* was 120px */
+}
+
+.modalContent {
+    color: black;
+    margin: auto;
+    text-transform: initial;
+    color: #FFFFFF;
+    border: 1px solid;
+}
+
+.close {
+    color: #AAAAAA;
+    font-weight: bold;
+    font-size: 30px;
+    float: right;
+    margin-top: -10px;
+}
+
+.big {
+    font-size: 60px;
+}
+
+.blackText {
+    color: #000000;
+}
+
+#lowPressure {
+    display: none;
+}
+
+#lowQual {
+    display: none;
+}
+
+/* not clean */
+#backNowEO {
+    display: none;
+}
+#backNowER {
+    display: none;
+}
+#backNowWO {
+    display: none;
+}
+#backNowWR {
+    display: none;
+}
+
+
+
+.header {     /* used to be splash_title */
+    margin-top: 20px;   
+    color:#FFFFFF;
+}
+
+.text {
+    color:#FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+/*    overflow-x: hidden;*/
+    overflow-y: scroll;
+    text-align: center;
+    text-transform: initial;
+    height: calc(100vh - (117px));   /*probably a cleaner way to doing this, 97px is right i think, +bottom padding*/
+    padding-bottom: 20px;
+}
+
+.textL {
+    color:#FFFFFF;
+    padding-top: 5px;
+    padding-right: 5px;
+    text-align: right;
+    text-transform: initial;
+}
+
+.text2 {
+    color:#FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+/*    overflow-x: hidden;*/
+    overflow-y: scroll;
+    text-align: center;
+    text-transform: initial;
+}
+
+.text_title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tab {
+    height: 40px;
+    margin-top: 5px;
+    color:#393939;
+    background-color:#F5F5F5;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+/*    width: 10000px; */
+/*    border-top: 0px;
+    border-bottom: 0px;    if code stops working, this is why*/ 
+}
+
+.utilities {
+    position: fixed;
+    bottom: 10px;
+    width: 100vw;
+    text-align: center;
+/*    margin-left: 8px;*/
+}
+.utilUpper a {
+    text-decoration: none;
+    color: ;
+}
+
+.utilUpper {
+    position: fixed;
+    bottom: 55px;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 50px;
+/*    margin-left: 8px;*/
+}
+.utilLower {
+    position: fixed;
+    bottom: 10px;
+    height: 35px;
+    width: 100vw;
+    margin-bottom: 20px;
+    text-align: center;
+/*    margin-left: 8px;*/
+}
+
+
+.btn {
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 4px;
+    text-align:center;
+    background-color:#333333; /* used to be ##334d4d */
+    color:#FFFFFF;
+}
+
+.btnNew {
+    width: 45vw;
+    height: 50px;
+    display: inline;
+    margin: 5px;
+    bottom: 10px;
+    border-radius: 4px;
+    text-align:center;
+    vertical-align: bottom;
+    background-color:#333333;
+    color:#FFFFFF;
+}
+
+
+.btn1 {  /* need to clean this up a bit */
+    width: 95vw;
+    height: 50px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 4px;
+    text-align:center;
+    background-color:#333333; /* short term change to all buttons, beta */
+    color:#FFFFFF;
+}
+
+.btn_green {
+    width: 25vw;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 4px;
+    text-align:center;
+    background-color:green;
+    color:#FFFFFF;
+}
+
+.btn_orange {
+    width: 25vw;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 4px;
+    text-align:center;
+    background-color:orange;
+    color:#FFFFFF;
+}
+
+.btn_red {
+    width: 25vw;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 4px;
+    text-align:center;
+    background-color:red;
+    color:#FFFFFF;
+}
+
+.tab_btn {
+/*    width: 90px;*/
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 4px;
+    text-align:center;
+    padding: 0;
+    border: none;
+    background: none;
+    margin-left: 10px;
+}
+
+.return{
+    margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 4px;
+    text-align:center;
+    background-color:##334d4d;
+    color:#0000FF;
+}
+
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/droplet7.png) no-repeat center bottom; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.waiting {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+.modalMap1 {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    /*margin-top: calc(-100vh + (60px));*/
+    width: 80vw;
+    overflow: auto
+    margin-left: 10vw;
+    margin-right: 10vw;
+    max-height: calc(100vh - (140px)); /* was 120px */
+    background-color: #FFFFFF;
+    margin-top: -450px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
