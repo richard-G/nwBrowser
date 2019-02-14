@@ -8,12 +8,14 @@ body {
     color:#FFFFFF;
     text-transform:uppercase;
     margin: 0px;
-    background:url(../img/background4.png) no-repeat center center fixed;
+    /*background:url(../img/background4.png) no-repeat center center fixed;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;   removed 14/02/19*/
+    background: rgba(5, 5, 15);
+    background-image: linear-gradient(to bottom right, rgba(5, 5, 15), rgba(9, 9, 30));  /* added 14/02/19 */
     overflow-y: hidden;   /* this makes scroll work on web, not on app */
    /* background-position: 50% 50%;*/
 }
