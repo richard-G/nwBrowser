@@ -63,7 +63,8 @@ html {
 /*    background-color: #2F2F2F;*/
     background:url('../img/background4.png') no-repeat center fixed;
     background-size: cover;
-    width: 80vw;
+    /*width: 80vw;*/
+    max-width: 80vw; /*added 14/02/19*/
     overflow: auto
     z-index: 1;
     margin-top: calc(-100vh + (60px));   /* not clean but probably okay, USED TO BE 100px!, beta */
@@ -131,7 +132,7 @@ html {
     padding-left: 20px;
     padding-right: 20px;
 /*    overflow-x: hidden;*/
-    overflow-y: scroll;
+    overflow-y: auto;
     text-align: center;
     text-transform: initial;
     height: calc(100vh - (117px));   /*probably a cleaner way to doing this, 97px is right i think, +bottom padding*/

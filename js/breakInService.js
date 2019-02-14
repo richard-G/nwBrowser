@@ -32,6 +32,9 @@ var setupModal = function() {
     var closeEO = document.getElementById("closeEO");
     var closeEG = document.getElementById("closeEG");
 
+    var behind = document.getElementById("behind");
+
+
     signalWR.onclick = function() {
         modalWR.style.display = "block";
         modalWO.style.display = "none";
@@ -39,6 +42,8 @@ var setupModal = function() {
         modalER.style.display = "none";
         modalEO.style.display = "none";
         modalEG.style.display = "none";
+        behind.style.opacity = "0.5";
+
     }
     signalWO.onclick = function() {
         modalWO.style.display = "block";
@@ -47,6 +52,7 @@ var setupModal = function() {
         modalER.style.display = "none";
         modalEO.style.display = "none";
         modalEG.style.display = "none";
+        behind.style.opacity = "0.5";
     }
     signalWG.onclick = function() {
         modalWG.style.display = "block";
@@ -55,6 +61,7 @@ var setupModal = function() {
         modalER.style.display = "none";
         modalEO.style.display = "none";
         modalEG.style.display = "none";
+        behind.style.opacity = "0.5";
     }
     signalER.onclick = function() {
         modalER.style.display = "block";
@@ -63,6 +70,7 @@ var setupModal = function() {
         modalWG.style.display = "none";
         modalEO.style.display = "none";
         modalEG.style.display = "none";
+        behind.style.opacity = "0.5";
     }
     signalEO.onclick = function() {
         modalEO.style.display = "block";
@@ -71,6 +79,7 @@ var setupModal = function() {
         modalWG.style.display = "none";
         modalER.style.display = "none";
         modalEG.style.display = "none";
+        behind.style.opacity = "0.5";
     }
     signalEG.onclick = function() {
         modalEG.style.display = "block";
@@ -79,25 +88,32 @@ var setupModal = function() {
         modalWG.style.display = "none";
         modalER.style.display = "none";
         modalEO.style.display = "none";
+        behind.style.opacity = "0.5";
     }
 
     closeWR.onclick = function() {
         modalWR.style.display = "none";
+        behind.style.opacity = "1";
     }
     closeWO.onclick = function() {
         modalWO.style.display = "none";
+        behind.style.opacity = "1";
     }
     closeWG.onclick = function() {
         modalWG.style.display = "none";
+        behind.style.opacity = "1";
     }
     closeER.onclick = function() {
         modalER.style.display = "none";
+        behind.style.opacity = "1";
     }
     closeEO.onclick = function() {
         modalEO.style.display = "none";
+        behind.style.opacity = "1";
     }
     closeEG.onclick = function() {
         modalEG.style.display = "none";
+        behind.style.opacity = "1";
     }
 
 }

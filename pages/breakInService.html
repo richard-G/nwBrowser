@@ -30,60 +30,64 @@
     <script type="text/javascript" src="../js/breakInService.js"></script>
     <script type="text/javascript" src="../js/createAnAccount.js"></script>
 
-    <div class="header">
-        <h1>Log Data</h1>  
-    </div>
+    <div id="behind">
+
+	    <div class="header">
+	        <h1>Log Data</h1>  
+	    </div>
 
 
-    <div class="tab">
-        <a href='../index.html'><button class="tab_btn">Home</button></a>
-        <a href="whoWeAre.html"><button class="tab_btn">Who We Are</button></a>
-        <a href="takePart.html"><button class="tab_btn">How to Take Part</button></a>
-        <a href="whyGetInvolved.html"><button class="tab_btn">Why Get Involved</button></a>
-        <a href="supportUs.html"><button class="tab_btn">Support Us</button></a>
-        <a onclick="openWeb()"><button class="tab_btn">Our Website</button></a>
-    </div>
+	    <div class="tab">
+	        <a href='../index.html'><button class="tab_btn">Home</button></a>
+	        <a href="whoWeAre.html"><button class="tab_btn">Who We Are</button></a>
+	        <a href="takePart.html"><button class="tab_btn">How to Take Part</button></a>
+	        <a href="whyGetInvolved.html"><button class="tab_btn">Why Get Involved</button></a>
+	        <a href="supportUs.html"><button class="tab_btn">Support Us</button></a>
+	        <a onclick="openWeb()"><button class="tab_btn">Our Website</button></a>
+	    </div>
 
-    <div class="text">
-    	<p>
-    		This page can be used to log your water and power supply performances over the day. Please visit our <b>take part</b> page before logging data!
-    	</p>
-    	<p>
-    		Press the appropriate buttons for both water and for electricity service performance. If there was a period of less than normal performance, tell us at what time you noticed it, and at what time (if at all) it came back.
-    	</p>
-    	<p class="text_title">
-    		Water Service
-    	</p>
-    	<p> 
-    		If you've experienced no interruptions of water supply since your last log, press the <span style="color:green">green</span> button.
-    	</p>
-    	<p>
-    		If you've experienced a period of reduction in the water pressure or quality, press the <span style="color:orange">orange</span> button.
-    	</p>
-    	<p> 
-    		If you've experienced a period of no water at all, press the <span style="color:red">red</span> button.
-    	</p>
+	    <div class="text">
+	    	<p>
+	    		This page can be used to log your water and power supply performances over the day. Please visit our <b>take part</b> page before logging data!
+	    	</p>
+	    	<p>
+	    		Press the appropriate buttons for both water and for electricity service performance. If there was a period of less than normal performance, tell us at what time you noticed it, and at what time (if at all) it came back.
+	    	</p>
+	    	<p class="text_title">
+	    		Water Service
+	    	</p>
+	    	<p> 
+	    		If you've experienced no interruptions of water supply since your last log, press the <span style="color:green">green</span> button.
+	    	</p>
+	    	<p>
+	    		If you've experienced a period of reduction in the water pressure or quality, press the <span style="color:orange">orange</span> button.
+	    	</p>
+	    	<p> 
+	    		If you've experienced a period of no water at all, press the <span style="color:red">red</span> button.
+	    	</p>
 
-    	<button id="signalWG" class="btn_green"></button>
-    	<button id="signalWO" class="btn_orange"></button>
-    	<button id="signalWR" class="btn_red"></button>
+	    	<button id="signalWG" class="btn_green"></button>
+	    	<button id="signalWO" class="btn_orange"></button>
+	    	<button id="signalWR" class="btn_red"></button>
 
-    	<p class="text_title">
-    		Electricity Service   <!-- power or electricity? -->
-    	</p>
-    	<p>
-    		If you've experienced no breaks in your power supply since your last log, press the <span style="color:green">green</span> button.
-    	</p>
-    	<p>
-    		If you've experienced an electricy cut from the municipality electricty, but you own a private supply of power (such as a generator), press the <span style="color:orange">orange</span> button
-    	</p>
-    	<p>
-    		If you've experienced an electricty cut from the municipality electricity, and you don't own a generator, press the <span style="color:red">red</span> button.
-    	</p>
-    	<button id="signalEG" class="btn_green"></button>
-    	<button id="signalEO" class="btn_orange"></button>
-    	<button id="signalER" class="btn_red"></button>
-    </div>
+	    	<p class="text_title">
+	    		Electricity Service   <!-- power or electricity? -->
+	    	</p>
+	    	<p>
+	    		If you've experienced no breaks in your power supply since your last log, press the <span style="color:green">green</span> button.
+	    	</p>
+	    	<p>
+	    		If you've experienced an electricy cut from the municipality electricty, but you own a private supply of power (such as a generator), press the <span style="color:orange">orange</span> button
+	    	</p>
+	    	<p>
+	    		If you've experienced an electricty cut from the municipality electricity, and you don't own a generator, press the <span style="color:red">red</span> button.
+	    	</p>
+	    	<button id="signalEG" class="btn_green"></button>
+	    	<button id="signalEO" class="btn_orange"></button>
+	    	<button id="signalER" class="btn_red"></button>
+	    </div>
+
+	</div>
 
 	<div id="modalWR" class="modal">
 		<div class="modalContent">
