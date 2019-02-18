@@ -32,6 +32,13 @@ var setupModal = function() {
     var closeEO = document.getElementById("closeEO");
     var closeEG = document.getElementById("closeEG");
 
+    var WRForm = document.getElementById("WRForm");
+    var WOForm = document.getElementById("WOForm");
+    var WGForm = document.getElementById("WGForm");
+    var ERForm = document.getElementById("ERForm");
+    var EOForm = document.getElementById("EOForm");
+    var EGForm = document.getElementById("EGForm");
+
     var behind = document.getElementById("behind");
 
 
@@ -94,26 +101,32 @@ var setupModal = function() {
     closeWR.onclick = function() {
         modalWR.style.display = "none";
         behind.style.opacity = "1";
+        WRForm.reset();
     }
     closeWO.onclick = function() {
         modalWO.style.display = "none";
         behind.style.opacity = "1";
+        WOForm.reset();
     }
     closeWG.onclick = function() {
         modalWG.style.display = "none";
         behind.style.opacity = "1";
+        WGForm.reset();
     }
     closeER.onclick = function() {
         modalER.style.display = "none";
         behind.style.opacity = "1";
+        ERForm.reset();
     }
     closeEO.onclick = function() {
         modalEO.style.display = "none";
         behind.style.opacity = "1";
+        EOForm.reset();
     }
     closeEG.onclick = function() {
         modalEG.style.display = "none";
         behind.style.opacity = "1";
+        EGForm.reset();
     }
 
 }

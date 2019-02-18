@@ -5,7 +5,7 @@
 body {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Arial, Helvetica, sans-serif;
     font-size:14px;
-    color:#FFFFFF;
+    /*color:#FFFFFF;*/
     text-transform:uppercase;
     margin: 0px;
     /*background:url(../img/background4.png) no-repeat center center fixed;
@@ -90,6 +90,7 @@ html {
     font-size: 30px;
     float: right;
     margin-top: -10px;
+    cursor: pointer;
 }
 
 .big {
@@ -219,6 +220,7 @@ html {
     text-align:center;
     background-color:#333333; /* used to be ##334d4d */
     color:#FFFFFF;
+    cursor: pointer;
 }
 
 .btnNew {
@@ -232,6 +234,7 @@ html {
     vertical-align: bottom;
     background-color:#333333;
     color:#FFFFFF;
+    cursor: pointer;
 }
 
 
@@ -244,39 +247,30 @@ html {
     text-align:center;
     background-color:#333333; /* short term change to all buttons, beta */
     color:#FFFFFF;
+    cursor: pointer;
 }
 
-.btn_green {
+.tlight {
     width: 25vw;
     height: 30px;
     display: inline-block;
     margin: 5px;
     border-radius: 4px;
     text-align:center;
-    background-color:green;
-    color:#FFFFFF;
+    color:#FFFFFF; 
+    cursor: pointer;
 }
 
-.btn_orange {
-    width: 25vw;
-    height: 30px;
-    display: inline-block;
-    margin: 5px;
-    border-radius: 4px;
-    text-align:center;
-    background-color:orange;
-    color:#FFFFFF;
+.green {
+    background-color: green;
 }
 
-.btn_red {
-    width: 25vw;
-    height: 30px;
-    display: inline-block;
-    margin: 5px;
-    border-radius: 4px;
-    text-align:center;
-    background-color:red;
-    color:#FFFFFF;
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
 }
 
 .tab_btn {
@@ -290,6 +284,7 @@ html {
     border: none;
     background: none;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .return{
