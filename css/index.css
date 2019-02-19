@@ -93,6 +93,10 @@ html {
     cursor: pointer;
 }
 
+.close:hover {
+    color: black;
+}
+
 .big {
     font-size: 60px;
 }
