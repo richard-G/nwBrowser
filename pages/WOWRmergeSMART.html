@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="../css/forms.css" type="text/css" rel="stylesheet">
+	<link href="../css/index.css" type="text/css" rel="stylesheet">
+	<link href="../css/radioNew.css" type="text/css" rel="stylesheet">
+
+	<style type="text/css">
+		#modalWO {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-height: 100%;
+		}
+		#fName {
+			margin-bottom: 5px;
+		}
+
+		.nextB {
+			position: relative;
+		  	display: block;
+		    padding: 19px 39px 18px 39px;
+		    border-radius: 4px;
+		    color: #FFF;
+		    margin: 0 auto;
+		    background: #1a8bbc;
+		    font-size: 18px;
+		    text-align: center;
+		    font-style: normal;
+		    width: 100%;
+		    border: 1px solid #146F96;
+		    border-width: 1px 1px 3px;
+		    margin-bottom: 10px;
+		    cursor: pointer;
+		}
+
+		.nextB:hover {
+			background: #146F96;
+			cursor: pointer;
+		}
+
+		#next, #send, #condO, #typeO, #timeBack, #loadNext {
+			display: none;
+		}
+
+
+
+
+	</style>
+
+</head>
+
+<body>
+
+  <div class="form-style-5 form" id="modalWO">
+		<span id="closeWO" class="close">&times;</span>
+	  <form id="WOForm">
+	  	<div id="userInfo">
+		    <fieldset>
+		      <legend><span class="number">1</span> User Infomation</legend>
+		      <input type="text" name="field1" placeholder="Your Name *" id="fName">
+		      <input type="text" name="field2" placeholder="Last Name *">
+		    </fieldset>
+		</div>
+	    <fieldset>
+	      <legend><span class="number">2</span> Water Service, O+R</legend>
+	      <div id="intro">
+		      <label class="question">Did you experience a cut in the water supply?</label>
+		      <div class="inputGroup">
+		      	<input id="radio3" name="radio1" type="radio" value="yes" onchange="smartFormIntro()"/>
+		      	<label for="radio3">Yes</label>
+		      </div>
+		      <div class="inputGroup"> 
+		      	<input id="radio4" name="radio1" type="radio" value="no" onchange="smartFormIntro()"/>
+		      	<label for="radio4">No</label>
+		      </div>
+		      <br>
+		      <div id="typeO">
+			      <label class="question">What is the problem with the water supply? (Select all that apply)</label>
+			      <div class="inputGroup">
+			      	<input id="option1" name="option1" type="checkbox" onchange="smartFormIntro()">
+			      	<label for="option1">Reduction in water pressure</label>
+			      </div>
+			      <div class="inputGroup">
+			      	<input id="option2" name="option2" type="checkbox" onchange="smartFormIntro()">
+			      	<label for="option2">Lower water quality</label>
+			      </div>
+			      <br>
+		  	  </div>
+		      <button id="loadNext" type="button" class="nextB">Next</button>
+	  		</div>
+	  	<div id="condO">
+	      <label class="question">In what ways is the water of low quality? (Select all that apply)</label>
+	      <div class="inputGroup">
+	      	<input id="option3" name="option3" type="checkbox">
+	      	<label for="option3">Taste</label>
+	      </div>
+	      <div class="inputGroup">
+	      	<input id="option4" name="option4" type="checkbox">
+	      	<label for="option4">Smell</label>
+	      </div>
+	      <div class="inputGroup">
+	      	<input id="option5" name="option5" type="checkbox">
+	      	<label for="option5">Appearance</label>
+	      </div>
+	      <textarea rows="2" placeholder="If you like, tell us more about the water quality here" maxlength="300"></textarea>
+	      <br>
+	  	</div>
+	  	<div id="next">
+	      <label class="question"> At what time was this noticed? </label>
+	      <input type="time" name="field3">
+	      <label class="question"> Is your water supply performing normally now? </label>
+	      <div class="inputGroup">
+	        <input id="radio1" name="radio2" type="radio" onchange="smartForm()"/>
+	        <label for="radio1">Yes</label>
+	      </div>
+	      <div class="inputGroup">
+	        <input id="radio2" name="radio2" type="radio" onchange="smartForm()"/>
+	        <label for="radio2">No</label>
+	      </div>
+	      <br>
+	      <div id="timeBack">
+		  	<label class="question">At what time did the water supply perform normally again?</label>
+		    <input type="time" name="field4" id="timeB"> 
+	  	  </div>
+	    </fieldset>
+	  		<input type="submit" value="Submit" id="send"/>
+		</div>
+	  </form>
+	</div>
+
+	<script>
+
+		var userInfo = document.getElementById('userInfo');
+		var intro = document.getElementById('intro');
+		var next = document.getElementById('next');
+		var typeO = document.getElementById('typeO');
+		var condO = document.getElementById('condO');
+		var send = document.getElementById('send');
+		var loadNext = document.getElementById('loadNext');
+		var radio3 = document.getElementById('radio3');
+		var radio4 = document.getElementById('radio4');
+		var option1 = document.getElementById('option1');
+		var option2 = document.getElementById('option2');
+
+		var radio1 = document.getElementById('radio1');
+		var radio2 = document.getElementById('radio2');
+
+		var timeB = document.getElementById('timeB');
+
+		function smartFormIntro() {
+			if (radio3.checked) {
+				typeO.style.display = "none";
+				option1.checked = false;
+				option2.checked = false;
+				loadNext.style.display = "block";
+			}
+			else if (radio4.checked) {
+				typeO.style.display = "block";
+				if ( (option1.checked) || (option2.checked) ) {
+					loadNext.style.display = "block";
+				}
+				else {
+					loadNext.style.display = "none";
+				}
+			}
+		}
+
+		function smartForm() {
+			if (radio1.checked) {
+				timeBack.style.display = "block";
+			}
+			else if (radio2.checked) {
+				timeBack.style.display = "none";
+				timeB.valueAsDate = null;
+
+			}
+		}
+
+		loadNext.onclick = function () {
+			userInfo.style.display = "none";
+			intro.style.display = "none";
+			next.style.display = "block";
+			send.style.display = "block";
+			if (option2.checked) {
+				condO.style.display = "block";
+			}
+		}
+
+	</script>
+
+
+</body>
+
+</html>
