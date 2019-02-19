@@ -179,7 +179,7 @@
 				timeBack.style.display = "none";
 				timeB.valueAsDate = null;
 			}
-			if ( (((condO.style.display) == "block") && (option3.checked || option4.checked || option5.checked) ) || (condO.style.display) == "none") {
+			if ( (((condO.style.display) == "block") && (option3.checked || option4.checked || option5.checked) ) || ((condO.style.display) == "none")) {
 				if (startTime.valueAsDate != null) {
 					if ((radio1.checked) && (timeB.valueAsDate != null)) {
 						send.style.display = "block";
@@ -207,6 +207,9 @@
 			//send.style.display = "block";
 			if (option2.checked) {
 				condO.style.display = "block";
+			}
+			else {
+				condO.style.display = "none";
 			}
 		}
 
