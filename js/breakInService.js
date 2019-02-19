@@ -15,28 +15,28 @@ var setupModal = function() {
     var modalWO = document.getElementById('modalWO');
     var modalWG = document.getElementById('modalWG');
     var modalER = document.getElementById('modalER');
-    var modalEO = document.getElementById('modalEO');
+    //var modalEO = document.getElementById('modalEO');
     var modalEG = document.getElementById('modalEG');
 
     var signalWR = document.getElementById('signalWR');
     var signalWO = document.getElementById('signalWO');
     var signalWG = document.getElementById('signalWG');
     var signalER = document.getElementById('signalER');
-    var signalEO = document.getElementById('signalEO');
+    //var signalEO = document.getElementById('signalEO');
     var signalEG = document.getElementById('signalEG');
 
     var closeWR = document.getElementById("closeWR");
     var closeWO = document.getElementById("closeWO");
     var closeWG = document.getElementById("closeWG");
     var closeER = document.getElementById("closeER");
-    var closeEO = document.getElementById("closeEO");
+    //var closeEO = document.getElementById("closeEO");
     var closeEG = document.getElementById("closeEG");
 
     var WRForm = document.getElementById("WRForm");
     var WOForm = document.getElementById("WOForm");
     var WGForm = document.getElementById("WGForm");
     var ERForm = document.getElementById("ERForm");
-    var EOForm = document.getElementById("EOForm");
+    //var EOForm = document.getElementById("EOForm");
     var EGForm = document.getElementById("EGForm");
 
     var behind = document.getElementById("behind");
@@ -47,7 +47,7 @@ var setupModal = function() {
         modalWO.style.display = "none";
         modalWG.style.display = "none";
         modalER.style.display = "none";
-        modalEO.style.display = "none";
+        //modalEO.style.display = "none";
         modalEG.style.display = "none";
         behind.style.opacity = "0.5";
 
@@ -57,7 +57,7 @@ var setupModal = function() {
         modalWR.style.display = "none";
         modalWG.style.display = "none";
         modalER.style.display = "none";
-        modalEO.style.display = "none";
+        //modalEO.style.display = "none";
         modalEG.style.display = "none";
         behind.style.opacity = "0.5";
     }
@@ -66,7 +66,7 @@ var setupModal = function() {
         modalWR.style.display = "none";
         modalWO.style.display = "none";
         modalER.style.display = "none";
-        modalEO.style.display = "none";
+        //modalEO.style.display = "none";
         modalEG.style.display = "none";
         behind.style.opacity = "0.5";
     }
@@ -75,11 +75,11 @@ var setupModal = function() {
         modalWR.style.display = "none";
         modalWO.style.display = "none";
         modalWG.style.display = "none";
-        modalEO.style.display = "none";
+        //modalEO.style.display = "none";
         modalEG.style.display = "none";
         behind.style.opacity = "0.5";
     }
-    signalEO.onclick = function() {
+    /*signalEO.onclick = function() {
         modalEO.style.display = "block";
         modalWR.style.display = "none";
         modalWO.style.display = "none";
@@ -87,14 +87,14 @@ var setupModal = function() {
         modalER.style.display = "none";
         modalEG.style.display = "none";
         behind.style.opacity = "0.5";
-    }
+    }*/
     signalEG.onclick = function() {
         modalEG.style.display = "block";
         modalWR.style.display = "none";
         modalWO.style.display = "none";
         modalWG.style.display = "none";
         modalER.style.display = "none";
-        modalEO.style.display = "none";
+        //modalEO.style.display = "none";
         behind.style.opacity = "0.5";
     }
 
@@ -118,11 +118,11 @@ var setupModal = function() {
         behind.style.opacity = "1";
         ERForm.reset();
     }
-    closeEO.onclick = function() {
+    /*closeEO.onclick = function() {
         modalEO.style.display = "none";
         behind.style.opacity = "1";
         EOForm.reset();
-    }
+    }*/
     closeEG.onclick = function() {
         modalEG.style.display = "none";
         behind.style.opacity = "1";

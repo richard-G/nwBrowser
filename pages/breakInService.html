@@ -79,13 +79,9 @@
 	    		If you've experienced no breaks in your power supply since your last log, press the <span style="color:green">green</span> button.
 	    	</p>
 	    	<p>
-	    		If you've experienced an electricy cut from the municipality electricty, but you own a private supply of power (such as a generator), press the <span style="color:orange">orange</span> button
-	    	</p>
-	    	<p>
 	    		If you've experienced an electricty cut from the municipality electricity, and you don't own a generator, press the <span style="color:red">red</span> button.
 	    	</p>
 	    	<button id="signalEG" class="tlight green"></button>
-	    	<button id="signalEO" class="tlight orange"></button>
 	    	<button id="signalER" class="tlight red"></button>
 	    </div>
 
@@ -254,6 +250,24 @@
 		</div>
 	</div>
 
+	<div class="form-style-5 form" id="modalWG">
+		<span id="closeWG" class="close">&times;</span>
+	  <form id="WGForm">
+	    <fieldset>
+	      <legend><span class="number">1</span> User Infomation</legend>
+	      <input type="text" name="field1" placeholder="Your Name *">
+	      <input type="text" name="field2" placeholder="Last Name *">
+	    </fieldset>
+	    <fieldset>
+	      <legend><span class="number">2</span> Water Service, Green</legend>
+	      <label class="question">Please press submit to confirm that there has been an uninterrupted water service since your last log</label>
+	    </fieldset>
+	  <input type="submit" value="Submit" />
+	  </form>
+	</div>
+
+	<!--
+
 	<div id="modalWG" class="modal">
 		<div class="modalContent">
 			<span id="closeWG" class="close">&times;</span>
@@ -276,7 +290,9 @@
 
 					Please press submit to confirm that there has been an uninterrupted water service since last log. <br><br>
 					
+					-->
 					<!-- edited for web -->
+					<!--
 					<input type="hidden" id="hidden_address" name="address" value="n/a">
 					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
 					<input type="hidden" id="hidden_country" name="country" value="nepal">
@@ -290,7 +306,9 @@
 				</fieldset>
 			</form>
 		</div>
-	</div>      
+	</div>    
+
+	-->  
 
 	<div id="modalER" class="modal">
 		<div class="modalContent">
@@ -335,6 +353,8 @@
 		</div>
 	</div>
 
+	<!--
+
 	<div id="modalEO" class="modal">
 		<div class="modalContent">
 			<span id="closeEO" class="close">&times;</span>
@@ -360,9 +380,10 @@
 					<div id="backNowEO">
 					At what time did the power come back? <br>
 					<input type="text" name="endtimeEO" id="endtimeEO" placeholder="e.g. '19:15'"> <br> </div> <br>
-
+					-->
 					<!--<input type="hidden" id="hidden_firstName" name="firstName" value="n/a">
 					<input type="hidden" id="hidden_lastName" name="lastName" value="n/a">-->
+					<!--
 					<input type="hidden" id="hidden_address" name="address" value="n/a">
 					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
 					<input type="hidden" id="hidden_country" name="country" value="nepal">
@@ -378,12 +399,31 @@
 		</div>
 	</div>
 
+	-->
+
+	<div class="form-style-5 form" id="modalEG">
+		<span id="closeEG" class="close">&times;</span>
+	  <form id="EGForm">
+	    <fieldset>
+	      <legend><span class="number">1</span> User Infomation</legend>
+	      <input type="text" name="field1" placeholder="Your Name *">
+	      <input type="text" name="field2" placeholder="Last Name *">
+	    </fieldset>
+	    <fieldset>
+	      <legend><span class="number">2</span> Electricity Service, Green</legend>
+	      <label class="question">Please press submit to confirm that there has been an uninterrupted water service since your last log</label>
+	    </fieldset>
+	  <input type="submit" value="Submit" />
+	  </form>
+	</div>
+
+	<!--
 	<div id="modalEG" class="modal">
 		<div class="modalContent">
 			<span id="closeEG" class="close">&times;</span>
 			<form id="EGForm" onsubmit="formSubmit(event, 'EGForm', 'modalEG', 'cbEG')">
 				<fieldset>
-					<legend>Power Service, Green:</legend> <!-- maybe additional input here? -->
+					<legend>Power Service, Green:</legend>
 					Name: <br>
 					<input type="text" id="hidden_firstName" name="firstName" value="" required> <br>
 					Last name: <br>
@@ -391,9 +431,10 @@
 
 
 					Please press submit to confirm that there has been an uninterrupted power service since last log. <br><br>
-
+					-->
 					<!--<input type="hidden" id="hidden_firstName" name="firstName" value="n/a">
 					<input type="hidden" id="hidden_lastName" name="lastName" value="n/a">-->
+					<!--
 					<input type="hidden" id="hidden_address" name="address" value="n/a">
 					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
 					<input type="hidden" id="hidden_country" name="country" value="nepal">
@@ -408,6 +449,7 @@
 			</form>
 		</div>
 	</div>        
+	-->
 
     <script type="text/javascript">
         //app.initialize();
