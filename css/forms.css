@@ -2,12 +2,17 @@
   max-width: 500px;
   padding: 10px 20px;
   background: #f4f7f8;
-  margin: 0px auto;
+  margin: 0px 10vw;
   padding: 20px;
   background: #f4f7f8;
   border-radius: 8px;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-transform: none;
+  position: absolute;
+  top: 100px;
+  display: none;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
 }
 .form-style-5 fieldset{
   border: none;

@@ -138,7 +138,7 @@ html {
     overflow-y: auto;
     text-align: center;
     text-transform: initial;
-    height: calc(100vh - (117px));   /*probably a cleaner way to doing this, 97px is right i think, +bottom padding*/
+    height: calc(100vh - (93px));   /*probably a cleaner way to doing this, 97px is right i think, +bottom padding, changed to 93 (was 117) 18/02/19*/
     padding-bottom: 20px;
 }
 
@@ -275,9 +275,9 @@ html {
 
 .tab_btn {
 /*    width: 90px;*/
-    height: 30px;
+    height: 40px;
     display: inline-block;
-    margin: 5px;
+    margin: 0;
     border-radius: 4px;
     text-align:center;
     padding: 0;
