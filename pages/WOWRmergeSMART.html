@@ -94,15 +94,15 @@
 	  	<div id="condO">
 	      <label class="question">In what ways is the water of low quality? (Select all that apply)</label>
 	      <div class="inputGroup">
-	      	<input id="option3" name="option3" type="checkbox">
+	      	<input id="option3" name="option3" type="checkbox" onchange="smartForm()">
 	      	<label for="option3">Taste</label>
 	      </div>
 	      <div class="inputGroup">
-	      	<input id="option4" name="option4" type="checkbox">
+	      	<input id="option4" name="option4" type="checkbox" onchange="smartForm()">
 	      	<label for="option4">Smell</label>
 	      </div>
 	      <div class="inputGroup">
-	      	<input id="option5" name="option5" type="checkbox">
+	      	<input id="option5" name="option5" type="checkbox" onchange="smartForm()">
 	      	<label for="option5">Appearance</label>
 	      </div>
 	      <textarea rows="2" placeholder="If you like, tell us more about the water quality here" maxlength="300"></textarea>
@@ -110,7 +110,7 @@
 	  	</div>
 	  	<div id="next">
 	      <label class="question"> At what time was this noticed? </label>
-	      <input type="time" name="field3">
+	      <input type="time" name="field3" id="startTime" onchange="smartForm()">
 	      <label class="question"> Is your water supply performing normally now? </label>
 	      <div class="inputGroup">
 	        <input id="radio1" name="radio2" type="radio" onchange="smartForm()"/>
@@ -123,11 +123,11 @@
 	      <br>
 	      <div id="timeBack">
 		  	<label class="question">At what time did the water supply perform normally again?</label>
-		    <input type="time" name="field4" id="timeB"> 
+		    <input type="time" name="field4" id="timeB" onchange="smartForm()"> 
 	  	  </div>
-	    </fieldset>
+	  	</div>
+	     </fieldset>
 	  		<input type="submit" value="Submit" id="send"/>
-		</div>
 	  </form>
 	</div>
 
@@ -144,6 +144,9 @@
 		var radio4 = document.getElementById('radio4');
 		var option1 = document.getElementById('option1');
 		var option2 = document.getElementById('option2');
+		var option3 = document.getElementById('option3');
+		var option4 = document.getElementById('option4');
+		var option5 = document.getElementById('option5');
 
 		var radio1 = document.getElementById('radio1');
 		var radio2 = document.getElementById('radio2');
@@ -175,7 +178,25 @@
 			else if (radio2.checked) {
 				timeBack.style.display = "none";
 				timeB.valueAsDate = null;
-
+			}
+			if ( (((condO.style.display) == "block") && (option3.checked || option4.checked || option5.checked) ) || (condO.style.display) == "none") {
+				if (startTime.valueAsDate != null) {
+					if ((radio1.checked) && (timeB.valueAsDate != null)) {
+						send.style.display = "block";
+					}
+					else if (radio2.checked) {
+						send.style.display = "block";
+					}
+					else {
+						send.style.display = "none";
+					}
+				}
+				else {
+					send.style.display = "none";
+				}
+			}
+			else {
+				send.style.display = "none";
 			}
 		}
 
@@ -183,7 +204,7 @@
 			userInfo.style.display = "none";
 			intro.style.display = "none";
 			next.style.display = "block";
-			send.style.display = "block";
+			//send.style.display = "block";
 			if (option2.checked) {
 				condO.style.display = "block";
 			}
