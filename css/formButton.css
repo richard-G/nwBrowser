@@ -1,0 +1,31 @@
+.smile {
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	color: white;
+	font-weight: bold;
+	border-color: white;
+	content: ":-)";
+	transform: rotate(90deg);
+	font-size: 30px;
+	text-align: center;
+	font-family: monospace;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.smile:hover {
+	background.color: darkgreen ;
+}
+
+.green {
+	background-color: green;
+}
+
+.green:hover {
+	background-color: darkgreen;
+}
+
+.red {
+	background-color: red;
+}
