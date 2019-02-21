@@ -128,7 +128,6 @@
 	  	</div>
 	  	<input type="hidden" name="ID" value="">
 	  	<input type="hidden" name="timestamp" id="timestamp" value="">
-
 	     </fieldset>
 	  		<input type="submit" value="Submit" id="send"/>
 	  </form>
@@ -157,6 +156,8 @@
 
 		var timeBack = document.getElementById('timeBack');
 
+
+		//smart fields for page 1
 		function smartFormIntro() {
 			if (waterCutY.checked) {
 				typeO.style.display = "none";
@@ -175,6 +176,7 @@
 			}
 		}
 
+		//smart fields for page 2, including submit button
 		function smartForm() {
 			if (backyetY.checked) {
 				timeBackQ.style.display = "block";
@@ -204,6 +206,7 @@
 			}
 		}
 
+		//determines what questions will be asked on page 2
 		loadNext.onclick = function () {
 			userInfo.style.display = "none";
 			intro.style.display = "none";
@@ -216,6 +219,7 @@
 			}
 		}
 
+		//converts data collected in the form
 		function formSubmit(event, formID, modalID) {
 		    event.preventDefault();
 
@@ -233,9 +237,9 @@
 
 		    /*var modal = document.getElementById(modalID);
 		    modal.style.display = "none";*/
-
 		}
 
+		//sends form through ajax
 		function formSend(form) {
 		    $.ajax({
 		       type: "POST",
