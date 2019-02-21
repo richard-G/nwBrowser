@@ -5,67 +5,23 @@
 	<link href="../css/forms.css" type="text/css" rel="stylesheet">
 	<link href="../css/index.css" type="text/css" rel="stylesheet">
 	<link href="../css/radioNew.css" type="text/css" rel="stylesheet">
-
-	<style type="text/css">
-		#modalWO {
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			max-height: 100%;
-		}
-		#fName {
-			margin-bottom: 5px;
-		}
-
-		.nextB {
-			position: relative;
-		  	display: block;
-		    padding: 19px 39px 18px 39px;
-		    border-radius: 4px;
-		    color: #FFF;
-		    margin: 0 auto;
-		    background: #1a8bbc;
-		    font-size: 18px;
-		    text-align: center;
-		    font-style: normal;
-		    width: 100%;
-		    border: 1px solid #146F96;
-		    border-width: 1px 1px 3px;
-		    margin-bottom: 10px;
-		    cursor: pointer;
-		}
-
-		.nextB:hover {
-			background: #146F96;
-			cursor: pointer;
-		}
-
-		#next, #send, #condO, #typeO, #timeBackQ, #loadNext {
-			display: none;
-		}
-
-
-
-
-	</style>
-
+	<link href="../css/modals.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="form-style-5 form" id="modalWO">
-		<span id="closeWO" class="close">&times;</span>
-	  <form id="WOForm" onsubmit="formSubmit(event, 'WOForm', 'modalWO', 'cbWO')">
+  <div class="styled form" id="modalWR">
+		<span id="closeWR" class="close">&times;</span>
+	  <form id="WRForm" onsubmit="formSubmit(event, 'WRForm', 'modalWR', 'cbWR')">
 	  	<div id="userInfo">
 		    <fieldset>
 		      <legend><span class="number">1</span> User Infomation</legend>
-		      <input type="text" name="firstName" placeholder="Your Name *" id="fName">
+		      <input type="text" name="firstName" placeholder="Your Name *" class="fName">
 		      <input type="text" name="lastName" placeholder="Last Name *">
 		    </fieldset>
 		</div>
 	    <fieldset>
-	      <legend><span class="number">2</span> Water Service, O+R</legend>
+	      <legend><span class="number">2</span> Water Service, Red</legend>
 	      <div id="intro">
 		      <label class="question">Did you experience a cut in the water supply?</label>
 		      <div class="inputGroup">
@@ -126,22 +82,25 @@
 		    <input type="time" name="timeBack" id="timeBack" onchange="smartForm()"> 
 	  	  </div>
 	  	</div>
-	  	<input type="hidden" name="ID" value="">
+	    </fieldset>
+	    <input type="hidden" name="ID" value="">
 	  	<input type="hidden" name="timestamp" id="timestamp" value="">
-	     </fieldset>
-	  		<input type="submit" value="Submit" id="send"/>
+	  	<input type="hidden" name="buttonPicked" value="waterRed">
+	  	<input type="submit" value="Submit" id="sendWR"/>
 	  </form>
 	</div>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/breakInService.js"></script>
 	<script>
-
+/*
+		//declare all vars relating to water, red
 		var userInfo = document.getElementById('userInfo');
 		var intro = document.getElementById('intro');
 		var next = document.getElementById('next');
 		var typeO = document.getElementById('typeO');
 		var condO = document.getElementById('condO');
-		var send = document.getElementById('send');
+		var sendWR = document.getElementById('sendWR');
 		var loadNext = document.getElementById('loadNext');
 		var waterCutY = document.getElementById('waterCutY');
 		var waterCutN = document.getElementById('waterCutN');
@@ -188,21 +147,21 @@
 			if ( (((condO.style.display) == "block") && (taste.checked || smell.checked || appearance.checked) ) || ((condO.style.display) == "none")) {
 				if (startTime.valueAsDate != null) {
 					if ((backyetY.checked) && (timeBack.valueAsDate != null)) {
-						send.style.display = "block";
+						sendWR.style.display = "block";
 					}
 					else if (backyetN.checked) {
-						send.style.display = "block";
+						sendWR.style.display = "block";
 					}
 					else {
-						send.style.display = "none";
+						sendWR.style.display = "none";
 					}
 				}
 				else {
-					send.style.display = "none";
+					sendWR.style.display = "none";
 				}
 			}
 			else {
-				send.style.display = "none";
+				sendWR.style.display = "none";
 			}
 		}
 
@@ -233,14 +192,14 @@
 		    //remove all inputs with no values
 			form.find(":input").filter(function(){ return !this.value; }).attr("disabled", "disabled");
 
-		    formSend(form);
+		    formsend(form);
 
 		    /*var modal = document.getElementById(modalID);
 		    modal.style.display = "none";*/
-		}
+		/*}
 
 		//sends form through ajax
-		function formSend(form) {
+		function formsend(form) {
 		    $.ajax({
 		       type: "POST",
 		       url: "https://xdfz4o3cjk.execute-api.eu-west-2.amazonaws.com/live/networkingwater",
@@ -253,7 +212,7 @@
 		           console.log('submit successful')
 		       }
 		    });
-		}
+		}*/
 
 
 	</script>

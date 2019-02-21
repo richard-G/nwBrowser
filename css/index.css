@@ -391,3 +391,7 @@ a {
     color: #FFFFFF;
     text-decoration: none;
 }
+
+.hidden {
+    display: none;
+}

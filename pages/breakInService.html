@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/forms.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/radioNew.css"/>
+	<link href="../css/modals.css" type="text/css" rel="stylesheet">
 	<!--<link rel="stylesheet" type="text/css" href="../css/formButton.css"/>-->
 
 	<!--favicon info-->
@@ -62,19 +63,15 @@
 	    	<p> 
 	    		If you've experienced no interruptions of water supply since your last log, press the <span style="color:green">green</span> button.
 	    	</p>
-	    	<p>
-	    		If you've experienced a period of reduction in the water pressure or quality, press the <span style="color:orange">orange</span> button.
-	    	</p>
 	    	<p> 
-	    		If you've experienced a period of no water at all, press the <span style="color:red">red</span> button.
+	    		If you've experienced a period of reduction in the water pressure or quality, press the <span style="color:red">red</span> button.
 	    	</p>
 
 	    	<button id="signalWG" class="tlight green"></button >
-	    	<button id="signalWO" class="tlight orange"></button>
 	    	<button id="signalWR" class="tlight red"></button>
 
 	    	<p class="text_title">
-	    		Electricity Service   <!-- power or electricity? -->
+	    		Electricity Service
 	    	</p>
 	    	<p>
 	    		If you've experienced no breaks in your power supply since your last log, press the <span style="color:green">green</span> button.
@@ -85,18 +82,103 @@
 	    	<button id="signalEG" class="tlight green"></button>
 	    	<button id="signalER" class="tlight red"></button>
 	    </div>
-
 	</div>
 
-	<!--<div id="modalWR" class="modal">-->
+	<!--all modals-->
 
-	<div class="form-style-5 form" id="modalWR">
+
+	<div class="styled form" id="modalWR">
+			<span id="closeWR" class="close">&times;</span>
+		  <form id="WRForm" onsubmit="formSubmit(event, 'WRForm', 'modalWR', 'cbWR', 'sendWR')">
+		  	<div id="userInfo">
+			    <fieldset>
+			      <legend><span class="number">1</span> User Infomation</legend>
+			      <input type="text" name="firstName" placeholder="Your Name *" class="fName">
+			      <input type="text" name="lastName" placeholder="Last Name *">
+			    </fieldset>
+			</div>
+		    <fieldset>
+		      <legend><span class="number">2</span> Water Service, Red</legend>
+		      <div id="intro">
+			      <label class="question">Did you experience a cut in the water supply?</label>
+			      <div class="inputGroup">
+			      	<input id="waterCutY" name="waterCut" type="radio" value="yes" onchange="smartFormIntro()"/>
+			      	<label for="waterCutY">Yes</label>
+			      </div>
+			      <div class="inputGroup"> 
+			      	<input id="waterCutN" name="waterCut" type="radio" value="no" onchange="smartFormIntro()"/>
+			      	<label for="waterCutN">No</label>
+			      </div>
+			      <br>
+			      <div id="typeO">
+				      <label class="question">What is the problem with the water supply? (Select all that apply)</label>
+				      <div class="inputGroup">
+				      	<input id="reductionPressure" name="reductionPressure" type="checkbox" onchange="smartFormIntro()" value="yes">
+				      	<label for="reductionPressure">Reduction in water pressure</label>
+				      </div>
+				      <div class="inputGroup">
+				      	<input id="reductionQuality" name="reductionQuality" type="checkbox" onchange="smartFormIntro()" value="yes">
+				      	<label for="reductionQuality">Lower water quality</label>
+				      </div>
+				      <br>
+			  	  </div>
+			      <button id="loadNext" type="button" class="nextB">Next</button>
+		  		</div>
+		  	<div id="condO">
+		      <label class="question">In what ways is the water of low quality? (Select all that apply)</label>
+		      <div class="inputGroup">
+		      	<input id="taste" name="taste" type="checkbox" onchange="smartForm()" value="yes">
+		      	<label for="taste">Taste</label>
+		      </div>
+		      <div class="inputGroup">
+		      	<input id="smell" name="smell" type="checkbox" onchange="smartForm()" value="yes">
+		      	<label for="smell">Smell</label>
+		      </div>
+		      <div class="inputGroup">
+		      	<input id="appearance" name="appearance" type="checkbox" onchange="smartForm()" value="yes">
+		      	<label for="appearance">Appearance</label>
+		      </div>
+		      <textarea rows="2" placeholder="If you like, tell us more about the water quality here" maxlength="300" name="comments"></textarea>
+		      <br>
+		  	</div>
+		  	<div id="next">
+		      <label class="question"> At what time was this noticed? </label>
+		      <input type="time" name="startTime" id="startTime" onchange="smartForm()">
+		      <label class="question"> Is your water supply performing normally now? </label>
+		      <div class="inputGroup">
+		        <input id="backyetY" name="backyet" type="radio" onchange="smartForm()"/ value="yes">
+		        <label for="backyetY">Yes</label>
+		      </div>
+		      <div class="inputGroup">
+		        <input id="backyetN" name="backyet" type="radio" onchange="smartForm()"/ value="no">
+		        <label for="backyetN">No</label>
+		      </div>
+		      <br>
+		      <div id="timeBackQ">
+			  	<label class="question">At what time did the water supply perform normally again?</label>
+			    <input type="time" name="timeBack" id="timeBack" onchange="smartForm()"> 
+		  	  </div>
+		  	</div>
+		  	<div id="cbWR" class="hidden">
+			  	<legend><span class="number">3</span> Success!</legend>
+			  	<label class="question">Your data has been successfully logged!</label>
+	    	</div>
+		    </fieldset>
+		    <input type="hidden" name="ID" value="">
+		  	<input type="hidden" name="timestamp" id="timestamp" value="">
+		  	<input type="hidden" name="buttonPicked" value="waterRed">
+		  	<input type="submit" value="Submit" id="sendWR"/>
+		  </form>
+	</div>
+
+<!--
+	<div class="styled form" id="modalWR">
 		<span id="closeWR" class="close">&times;</span>
 	  <form id="WRForm">
 	    <fieldset>
 	      <legend><span class="number">1</span> User Infomation</legend>
-	      <input type="text" name="field1" placeholder="Your Name *">
-	      <input type="text" name="field2" placeholder="Last Name *">
+	      <input type="text" name="firstName" placeholder="Your Name *">
+	      <input type="text" name="lastName" placeholder="Last Name *">
 	    </fieldset>
 	    <fieldset>
 	      <legend><span class="number">2</span> Water Service, Red</legend>
@@ -116,7 +198,7 @@
 	  <input type="submit" value="Submit" />
 	  </form>
 	</div>
-
+-->
 	<!--</div>-->
 
 <!--
@@ -172,6 +254,7 @@
 		</div>
 	</div>
 -->
+<!--
 	<div id="modalWO" class="modal">
 		<div class="modalContent">
 			<span id="closeWO" class="close">&times;</span>
@@ -198,9 +281,9 @@
 					<input type="radio" onchange="handleChange()" name="typeWO" value="PandQ" id ="PandQ">Both <br>
 					At what time was this noticed? <br>
 					<input type="text" name="starttimeWO" placeholder="e.g. '19:15'"> <br>
-					Is your water supply performing normally now? <br> <!-- if yes, just endtimeWO required-->
+					Is your water supply performing normally now? <br> 
 					<input type="radio" onchange="handleChange()" name="backyetWO" value="yes" id="backyetWO">Yes
-					<input type="radio" onchange="handleChange()" name="backyetWO" value="no" id="backyetWOn">No <br> <!-- if no, ask about color/time to fill-->
+					<input type="radio" onchange="handleChange()" name="backyetWO" value="no" id="backyetWOn">No <br> 
 
 					<div id="lowPressure">
 						How long does it take to fill a 500ml container with water? <br>       
@@ -222,9 +305,9 @@
 					</div>
 
 					<br>
-		
+					-->
 					<!--<input type="hidden" id="hidden_firstName" name="firstName" value="n/a">
-					<input type="hidden" id="hidden_lastName" name="lastName" value="n/a">-->
+					<input type="hidden" id="hidden_lastName" name="lastName" value="n/a">--><!--
 					<input type="hidden" id="hidden_address" name="address" value="n/a">
 					<input type="hidden" id="hidden_postcode" name="postcode" value="n/a">
 					<input type="hidden" id="hidden_country" name="country" value="nepal">
@@ -240,20 +323,29 @@
 			</form>
 		</div>
 	</div>
+    -->
 
-	<div class="form-style-5 form" id="modalWG">
+	<div class="styled form" id="modalWG">
 		<span id="closeWG" class="close">&times;</span>
-	  <form id="WGForm">
+	  <form id="WGForm" onsubmit="formSubmit(event, 'WGForm', 'modalWG', 'cbWG', 'sendWG')">
 	    <fieldset>
 	      <legend><span class="number">1</span> User Infomation</legend>
-	      <input type="text" name="field1" placeholder="Your Name *">
-	      <input type="text" name="field2" placeholder="Last Name *">
+	      <input type="text" name="firstName" placeholder="Your Name *" class="fName">
+	      <input type="text" name="lastName" placeholder="Last Name *">
 	    </fieldset>
 	    <fieldset>
 	      <legend><span class="number">2</span> Water Service, Green</legend>
 	      <label class="question">Please press submit to confirm that there has been an uninterrupted water service since your last log</label>
+	      <div id="cbWG" class="hidden">
+	      	<br>
+		  	<legend><span class="number">3</span> Success!</legend>
+		  	<label class="question">Your data has been successfully logged!</label>
+	    </div>
 	    </fieldset>
-	  <input type="submit" value="Submit" />
+	    <input type="hidden" name="ID" value="">
+	  	<input type="hidden" name="timestamp" id="timestamp" value="">
+	  	<input type="hidden" name="buttonPicked" value="waterGreen">
+	  	<input type="submit" value="Submit" id="sendWG"/>
 	  </form>
 	</div>
 
@@ -300,32 +392,46 @@
 	</div>    
 	-->  
 
-	<div class="form-style-5 form" id="modalER">
+	
+	<div class="styled form" id="modalER">
 		<span id="closeER" class="close">&times;</span>
-	  <form id="ERForm">
+	  <form id="ERForm" onsubmit="formSubmit(event, 'ERForm', 'modalER', 'cbER', 'sendER')">
 	    <fieldset>
 	      <legend><span class="number">1</span> User Infomation</legend>
-	      <input type="text" name="field1" placeholder="Your Name *">
-	      <input type="text" name="field2" placeholder="Last Name *">
+	      <input type="text" name="firstName" placeholder="Your Name *" class="fName">
+	      <input type="text" name="lastName" placeholder="Last Name *">
 	    </fieldset>
 	    <fieldset>
 	      <legend><span class="number">2</span> Electricity Service, Red</legend>
 	      <label class="question"> At what time was the interruption noticed? </label>
-	      <input type="time" name="field3">
+	      <input type="time" name="starttime" id="starttimeER" onchange="smartFormIntro()">
 	      <label class="question"> Has the power supply come back? </label>
 	      <div class="inputGroup">
-	        <input id="radio1" name="radio" type="radio"/>
-	        <label for="radio1">Yes</label>
+	        <input id="backyetERY" name="backyet" type="radio" value="yes" onchange="smartFormIntro()"/>
+	        <label for="backyetERY">Yes</label>
 	      </div>
 	      <div class="inputGroup">
-	        <input id="radio2" name="radio" type="radio"/>
-	        <label for="radio2">No</label>
+	        <input id="backyetERN" name="backyet" type="radio" value="no" onchange="smartFormIntro()"/>
+	        <label for="backyetERN">No</label>
 	      </div>
 	      <br>
+	      <div id="timebackQER">
+		      <label for="timebackER" class="question">At what time did the power return?</label>
+		      <input type="time" name="timeback" id="timebackER" onchange="smartFormIntro()">
+	  	  </div>
+	      <br>
+	      <div id="cbER" class="hidden">
+		  	<legend><span class="number">3</span> Success!</legend>
+		  	<label class="question">Your data has been successfully logged!</label>
+	    </div>
 	    </fieldset>
-	  <input type="submit" value="Submit" />
+	    <input type="hidden" name="ID" value="">
+	  	<input type="hidden" name="timestamp" id="timestamp" value="">
+	  	<input type="hidden" name="buttonPicked" value="powerRed">
+	  	<input type="submit" value="Submit" id="sendER"/>
 	  </form>
 	</div>
+	
 
 	<!--
 	<div id="modalER" class="modal">
@@ -420,19 +526,27 @@
 
 	-->
 
-	<div class="form-style-5 form" id="modalEG">
+	<div class="styled form" id="modalEG">
 		<span id="closeEG" class="close">&times;</span>
-	  <form id="EGForm">
+	  <form id="EGForm" onsubmit="formSubmit(event, 'EGForm', 'modalEG', 'cbEG', 'sendEG')">
 	    <fieldset>
 	      <legend><span class="number">1</span> User Infomation</legend>
-	      <input type="text" name="field1" placeholder="Your Name *">
-	      <input type="text" name="field2" placeholder="Last Name *">
+	      <input type="text" name="firstName" placeholder="Your Name *" class="fName">
+	      <input type="text" name="lastName" placeholder="Last Name *">
 	    </fieldset>
 	    <fieldset>
 	      <legend><span class="number">2</span> Electricity Service, Green</legend>
 	      <label class="question">Please press submit to confirm that there has been an uninterrupted water service since your last log</label>
+	      <br>
+	      <div id="cbEG" class="hidden">
+		  	<legend><span class="number">3</span> Success!</legend>
+		  	<label class="question">Your data has been successfully logged!</label>
+	    </div>
 	    </fieldset>
-	  <input type="submit" value="Submit" />
+	  <input type="hidden" name="ID" value="">
+	  	<input type="hidden" name="timestamp" id="timestamp" value="">
+	  	<input type="hidden" name="buttonPicked" value="powerGreen">
+	  	<input type="submit" value="Submit" id="sendEG"/>
 	  </form>
 	</div>
 
