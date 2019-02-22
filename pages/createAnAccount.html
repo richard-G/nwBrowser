@@ -7,14 +7,14 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src * 'unsafe-inline'; media-src *" />  <!-- used to be style-src 'se'f' -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src * 'unsafe-inline'; media-src *; img-src 'self' data: content: https: *.googleapis.com;"/>  <!-- used to be style-src 'se'f' -->
 
 	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/cordova.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
     <script type="text/javascript" src="../js/createAnAccount.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATEkeiNL7strfLuQkuc8mQz6ul9OKDpfU&callback=showMapPE" type="text/javascript"></script> 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATEkeiNL7strfLuQkuc8mQz6ul9OKDpfU&callback=showMap" type="text/javascript"></script> 
 
     <!--favicon info-->
     <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
@@ -29,8 +29,6 @@
 </head>
 
 <body>
-    
-
     <div class="header">
         <h1>Get Started</h1>
     </div>
@@ -41,7 +39,7 @@
         <a href="takePart.html"><button class="tab_btn">How to Take Part</button></a>
         <a href="whyGetInvolved.html"><button class="tab_btn">Why Get Involved</button></a>
         <a href="supportUs.html"><button class="tab_btn">Support Us</button></a>
-        <a onclick="openWeb()"><button class="tab_btn">Our Website</button></a>
+        <a href="https://www.networkingwater.com" target="_blank"><button class="tab_btn">Our Website</button></a>
     </div>
 
 
@@ -70,8 +68,8 @@
 
                 <label for="countrycode">Country: <br>
                     <select name="countryCode" id="countrycode">
-                        <option data-countryCode="PE" value="Peru">Peru</option>
                         <option data-countryCode="NP" value="Nepal">Nepal</option>
+                        <option data-countryCode="PE" value="Peru">Peru</option>
                         <optgroup label="Other countries">
                             <option data-countryCode="DZ" value="213">Algeria</option>
                             <option data-countryCode="AD" value="376">Andorra</option>
@@ -265,15 +263,15 @@
                 </div>
 
                 <div id="modalMap" class="modalMap1 blackText">
-                    <span id="closeMap" class="close big">&times;</span>
-                    <div id="map" style="width:80vw;height:80vh;"></div>
+                    <p id="closeMap" class="close big noMargin">&times;</p>
+                    <div id="map"></div>
                 </div>   
 
                 <!-- added for beta -->
                 <input type="hidden" name="buttonPicked" value="getStarted">
                 <input type="hidden" name="ID" value="error">
                 <input type="hidden" name="timestamp" id="timestamp" value="error">
-                <input type="hidden" name="application" value="webEN">
+                <input type="hidden" name="application" value="web">
 
                 <!-- need hidden input here -->
                 

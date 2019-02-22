@@ -43,22 +43,6 @@ html {
     overflow-y: hidden;*/
 }
 
-.splash {
-/*    background:url(../img/watervalve.jpg) no-repeat center center fixed;
-    background-repeat: no-repeat;*/
-    background-position: center center; 
-    opacity: 1;
-    height: 100vh;
-    width: 100vw;
-/*    margin-left: -8px; 
-    margin-top: -8px; */    /* this is required as the body has margins of 8px */
-   /* not too sure why this works */
-/*    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;  */    /* need to separate background from this class */
-}
-
-
-
 .modal {
     display: none;
     position: fixed;
@@ -105,31 +89,37 @@ html {
     color: #000000;
 }
 
-#lowPressure {
+.modalMap1 {
     display: none;
+    position: absolute;
+    top: 98px;
+    left: 10px;
+    overflow: auto;
+    height: calc(100vh - 110px);
+    width: calc(100vw - 30px);
+    max-height: 500px;
+    max-width: 500px;
+    background-color: #f4f7f8;
+    border-radius: 5px;
+    padding: 5px;
 }
 
-#lowQual {
-    display: none;
+.noMargin {
+    margin-bottom: 0px;
 }
 
-/* not clean */
-#backNowEO {
-    display: none;
-}
-#backNowER {
-    display: none;
-}
-#backNowWO {
-    display: none;
-}
-#backNowWR {
-    display: none;
+.padded {
+    padding: 5px;
 }
 
+#map {
+    width: 90%;
+    height: 90%;
+    border-color: black;
+    border: thick solid 2px;
+}
 
-
-.header {     /* used to be splash_title */
+.header {   
     margin-top: 20px;   
     color:#FFFFFF;
 }
@@ -303,31 +293,6 @@ html {
     color:#0000FF;
 }
 
-
-/* Portrait layout (default) */
-.app {
-    background:url(../img/droplet7.png) no-repeat center bottom; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
-}
-
 h1 {
     font-size:24px;
     font-weight:normal;
@@ -335,56 +300,6 @@ h1 {
     overflow:visible;
     padding:0px;
     text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-
-.event.waiting {
-    background-color:#333333;
-    display:block;
-}
-
-.event.received {
-    background-color:#4B946A;
-    display:none;
-}
-
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
-
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
-
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
-}
-
-.modalMap1 {
-    display: none;
-    position: fixed;
-    z-index: 5;
-    /*margin-top: calc(-100vh + (60px));*/
-    width: 80vw;
-    overflow: auto
-    margin-left: 10vw;
-    margin-right: 10vw;
-    max-height: calc(100vh - (140px)); /* was 120px */
-    background-color: #FFFFFF;
-    margin-top: -450px;
 }
 
 a {

@@ -9,8 +9,8 @@ onReady = function() {
 
 var setupMap = function() {
     var modalMap = document.getElementById("modalMap");
-    var signalModal = document.getElementById("signalModal");
-    var closeMap = document.getElementById("closeMap");
+        signalModal = document.getElementById("signalModal");
+        closeMap = document.getElementById("closeMap");
 
     signalModal.onclick = function() {
         modalMap.style.display = "block";
@@ -26,12 +26,12 @@ function formSubmitInfo(event, formID, modalID) {
     event.preventDefault();
     
     var form = $('#'+formID);
-    var id = document.getElementById(formID).ID;
+        id = document.getElementById(formID).ID;
     id.value = Math.floor((Math.random() * 100000000) + 1);
     var timestamp = document.getElementById(formID).timestamp;
     timestamp.value = Date();
     var latID = document.getElementById("latID");
-    var lngID = document.getElementById("lngID");
+        lngID = document.getElementById("lngID");
     
 
     var postcode = document.getElementById(formID).postcode;
