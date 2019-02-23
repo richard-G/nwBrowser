@@ -8,16 +8,41 @@ body {
     /*color:#FFFFFF;*/
     text-transform:uppercase;
     margin: 0px;
+    min-height: 100%;
+    /*height: 150vh;*/ /*might work but it's dirty af*/
     /*background:url(../img/background4.png) no-repeat center center fixed;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
+    background-color: #373737;
+    background: linear-gradient(to bottom right, #373737, #111111); /* added 14/02/19 */
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;   removed 14/02/19*/
-    background: rgba(5, 5, 15);
-    background-image: linear-gradient(to bottom right, rgba(5, 5, 15), rgba(9, 9, 30));  /* added 14/02/19 */
+    background-size: cover;
     overflow-y: hidden;   /* this makes scroll work on web, not on app */
    /* background-position: 50% 50%;*/
+}
+
+
+@media (orientation: landscape) {
+    .frontpage {
+        background:url(../img/watervalveLandscape.jpg) no-repeat center center, #373737 !important;
+        background-size: 100vw !important;
+    }
+}
+
+/*fix for ios*/
+/*
+@media (max-width: @iphone-screen) {
+  background-attachment:inherit;    
+  background-size:cover;
+  -webkit-background-size:cover;
+}*/
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 html {
@@ -28,7 +53,8 @@ html {
 
 .frontpage {
     min-height: 100%;
-    /*background-attachment: fixed;*/
+    height: 100%;
+    /*background-attachment: fixed;*/   /*maybe this?*/
     margin: 0px;
     overflow: auto;
     background:url(../img/watervalve.jpg) no-repeat center center;  /*moved fixed to bottom, last rule*/
@@ -38,6 +64,7 @@ html {
     -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
+    overflow-y: hidden;   /*added 22/02/19*/
     /*height: 100vh;*/
     /*height: 100%;
     overflow-y: hidden;*/
@@ -168,6 +195,7 @@ html {
     /*overflow-x: scroll; edited out 14/02/19*/
     overflow-y: hidden;
     white-space: nowrap;
+    padding-right: 10px;
 /*    width: 10000px; */
 /*    border-top: 0px;
     border-bottom: 0px;    if code stops working, this is why*/ 
