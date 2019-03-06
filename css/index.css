@@ -400,10 +400,10 @@ a {
         background: url(../img/watervalveLandscape.jpg) no-repeat top center;
         max-width: 1250px;
         background-repeat: no-repeat;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
         overflow-y: hidden;
         height: calc(100vh - 224px);
     }
