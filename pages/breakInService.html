@@ -67,18 +67,6 @@
 
 			<button id="signalWG" class="tlight green"></button >
 			<button id="signalWR" class="tlight red"></button>
-
-			<p class="title">
-				Electricity<br>Service
-			</p>
-			<p>
-				If you've experienced no breaks in your power supply since your last log, press the <span style="color:green">green</span> button.
-			</p>
-			<p>
-				If you've experienced an electricty cut from the municipality electricity, press the <span style="color:red">red</span> button.
-			</p>
-			<button id="signalEG" class="tlight green"></button>
-			<button id="signalER" class="tlight red"></button>
 		</div>
 	</div>
 
@@ -193,73 +181,6 @@
 			<input type="hidden" name="buttonPicked" value="waterGreen">
 			<input type="hidden" name="application" value="web">
 			<input type="submit" value="Submit" id="sendWG"/>
-		</form>
-	</div>
-
-
-	<div class="styled form" id="modalER">
-		<span id="closeER" class="close">&times;</span>
-		<form id="ERForm" onsubmit="formSubmit(event, 'ERForm', 'modalER', 'cbER', 'sendER')">
-			<fieldset>
-				<legend><span class="number">1</span> User Infomation</legend>
-				<input type="text" name="firstName" placeholder="Your Name *" class="fName">
-				<input type="text" name="lastName" placeholder="Last Name *">
-			</fieldset>
-			<fieldset>
-				<legend><span class="number">2</span> Electricity Service, Red</legend>
-				<label class="question"> At what time was the interruption noticed? </label>
-				<input type="time" name="startTime" id="starttimeER" onchange="smartFormIntro()">
-				<label class="question"> Has the power supply come back? </label>
-				<div class="inputGroup">
-					<input id="backyetERY" name="backyet" type="radio" value="yes" onchange="smartFormIntro()"/>
-					<label for="backyetERY">Yes</label>
-				</div>
-				<div class="inputGroup">
-					<input id="backyetERN" name="backyet" type="radio" value="no" onchange="smartFormIntro()"/>
-					<label for="backyetERN">No</label>
-				</div>
-				<br>
-				<div id="timebackQER">
-					<label for="timebackER" class="question">At what time did the power return?</label>
-					<input type="time" name="timeBack" id="timebackER" onchange="smartFormIntro()">
-				</div>
-				<br>
-				<div id="cbER" class="hidden">
-					<legend><span class="number">3</span> Success!</legend>
-					<label class="question">Your data has been successfully logged!</label>
-				</div>
-			</fieldset>
-			<input type="hidden" name="ID" value="">
-			<input type="hidden" name="timestamp" id="timestamp" value="">
-			<input type="hidden" name="buttonPicked" value="powerRed">
-			<input type="hidden" name="application" value="web">
-			<input type="submit" value="Submit" id="sendER"/>
-		</form>
-	</div>
-	
-
-	<div class="styled form" id="modalEG">
-		<span id="closeEG" class="close">&times;</span>
-		<form id="EGForm" onsubmit="formSubmit(event, 'EGForm', 'modalEG', 'cbEG', 'sendEG')">
-			<fieldset>
-				<legend><span class="number">1</span> User Infomation</legend>
-				<input type="text" name="firstName" placeholder="Your Name *" class="fName">
-				<input type="text" name="lastName" placeholder="Last Name *">
-			</fieldset>
-			<fieldset>
-				<legend><span class="number">2</span> Electricity Service, Green</legend>
-				<label class="question">Please press submit to confirm that there has been an uninterrupted water service since your last log</label>
-				<br>
-				<div id="cbEG" class="hidden">
-					<legend><span class="number">3</span> Success!</legend>
-					<label class="question">Your data has been successfully logged!</label>
-				</div>
-			</fieldset>
-			<input type="hidden" name="ID" value="">
-			<input type="hidden" name="timestamp" id="timestamp" value="">
-			<input type="hidden" name="buttonPicked" value="powerGreen">
-			<input type="hidden" name="application" value="web">
-			<input type="submit" value="Submit" id="sendEG"/>
 		</form>
 	</div>
 

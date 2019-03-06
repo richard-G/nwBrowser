@@ -4,7 +4,6 @@ var initialize = function() {
 
 onDeviceReady = function() {
     setupModal();
-    dynamicF();
     declarevars();
 }
 
@@ -12,23 +11,15 @@ onDeviceReady = function() {
 var setupModal = function() {
     var modalWR = document.getElementById('modalWR');
         modalWG = document.getElementById('modalWG');
-        modalER = document.getElementById('modalER');
-        modalEG = document.getElementById('modalEG');
 
         signalWR = document.getElementById('signalWR');
         signalWG = document.getElementById('signalWG');
-        signalER = document.getElementById('signalER');
-        signalEG = document.getElementById('signalEG');
 
         closeWR = document.getElementById("closeWR");
         closeWG = document.getElementById("closeWG");
-        closeER = document.getElementById("closeER");
-        closeEG = document.getElementById("closeEG");
 
         WRForm = document.getElementById("WRForm");
         WGForm = document.getElementById("WGForm");
-        ERForm = document.getElementById("ERForm");
-        EGForm = document.getElementById("EGForm");
 
         behind = document.getElementById("behind");
 
@@ -36,29 +27,11 @@ var setupModal = function() {
     signalWR.onclick = function() {
         modalWR.style.display = "block";
         modalWG.style.display = "none";
-        modalER.style.display = "none";
-        modalEG.style.display = "none";
         behind.style.opacity = "0.5";
     }
     signalWG.onclick = function() {
         modalWG.style.display = "block";
         modalWR.style.display = "none";
-        modalER.style.display = "none";
-        modalEG.style.display = "none";
-        behind.style.opacity = "0.5";
-    }
-    signalER.onclick = function() {
-        modalER.style.display = "block";
-        modalWR.style.display = "none";
-        modalWG.style.display = "none";
-        modalEG.style.display = "none";
-        behind.style.opacity = "0.5";
-    }
-    signalEG.onclick = function() {
-        modalEG.style.display = "block";
-        modalWR.style.display = "none";
-        modalWG.style.display = "none";
-        modalER.style.display = "none";
         behind.style.opacity = "0.5";
     }
 
@@ -72,39 +45,6 @@ var setupModal = function() {
         modalWG.style.display = "none";
         behind.style.opacity = "1";
         WGForm.reset();
-    }
-    closeER.onclick = function() {
-        modalER.style.display = "none";
-        behind.style.opacity = "1";
-        ERForm.reset();
-        resetModalER();
-    }
-    closeEG.onclick = function() {
-        modalEG.style.display = "none";
-        behind.style.opacity = "1";
-        EGForm.reset();
-    }
-}
-
-var dynamicF = function() {
-    var endtimeER = document.getElementById("endtimeER"),
-        backyetER = document.getElementById("backyetER"),
-        backNowER = document.getElementById("backNowER");
-}
-
-function handleChange() {
-    if (backyetER.checked) {
-        backNowER.style.display = "block";
-    }
-    else {
-        backNowER.style.display = "none";
-    }
-
-    if (backyetEO.checked) {
-        backNowEO.style.display = "block";
-    }
-    else {
-        backNowEO.style.display = "none";
     }
 }
 
@@ -131,13 +71,6 @@ var declarevars = function() {
 
         timeBack = document.getElementById('timeBack');
 
-    //minor addition for power, red
-        timebackQER = document.getElementById('timebackQER');
-        timebackER = document.getElementById('timebackER');
-        backyetERY = document.getElementById('backyetERY');
-        backyetERN = document.getElementById('backyetERN');
-        starttimeER = document.getElementById('starttimeER');
-
     //determines what questions will be asked on page 2
     loadNext.onclick = function () {
         userInfo.style.display = "none";
@@ -163,11 +96,6 @@ function resetModal() {
     intro.style.display = "block";
 }
 
-function resetModalER() {
-    timebackQER.style.display = "none";
-    sendER.style.display = "none";
-}
-
 //smart fields for page 1
 function smartFormIntro() {
     if (waterCutY.checked) {
@@ -185,24 +113,6 @@ function smartFormIntro() {
             loadNext.style.display = "none";
         }
     }
-
-
-    //minor addition for power, red
-    if (backyetERY.checked) {
-        timebackQER.style.display = "block";
-    }
-    else if (backyetERN.checked) {
-        timebackQER.style.display = "none";
-        timebackER.valueAsDate = null;
-    }
-
-    if (starttimeER.valueAsDate != null) {
-        if ((backyetERN.checked) || (backyetERY.checked && timebackER.valueAsDate != null)) {
-            sendER.style.display = "block";
-        }
-        else sendER.style.display = "none";
-    }
-    else sendER.style.display = "none";
 }
 
 //smart fields for page 2, including submit button
