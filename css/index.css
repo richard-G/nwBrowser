@@ -23,15 +23,6 @@ body {
    /* background-position: 50% 50%;*/
 }
 
-
-/*fix for ios*/
-/*
-@media (max-width: @iphone-screen) {
-  background-attachment:inherit;    
-  background-size:cover;
-  -webkit-background-size:cover;
-}*/
-
 /*removes pre-defined stylesheet for button*/
 button {
     -webkit-appearance: none;
@@ -67,6 +58,7 @@ html {
     overflow-y: hidden;  
 }
 
+
 /*
 .wrapper {
     height: 100%;
@@ -84,6 +76,10 @@ html {
     height: calc(100vh - 224px);
 }
 */
+
+.pic {
+
+}
 
 .modal {
     display: none;
@@ -391,15 +387,32 @@ a {
 
 
 /*media queries*/
+
 @media (orientation: landscape) {
     .frontpage {
-        background:url(../img/watervalveLandscape.jpg) no-repeat center center, #373737;
-        background-size: 100vw;
-    }
-    .utilities {
         background-color: #373737;
+        background: linear-gradient(to bottom right, #373737, #111111);
     }
+    .wrapper {
+        height: 100%;
+        margin: 0 auto;
+        overflow: auto;
+        background: url(../img/watervalveLandscape.jpg) no-repeat top center;
+        max-width: 1250px;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow-y: hidden;
+        height: calc(100vh - 224px);
+    }
+    /*
+    .utilities {
+        background-color: inherit;
+    }*/
 }
+
 
 @media (min-width: 650px){
     .text {
