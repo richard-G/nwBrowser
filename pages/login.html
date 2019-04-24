@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/forms.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/radioNew.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/modals.css">
+
+	<!--favicon info-->
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+	<style type="text/css">
+        .styled {
+        	display: block !important;
+        }
+    </style>
+</head>
+
+
+<body>
+	<div class="styled form" id="modalLogin">
+		<span id="closeLogin" class="close">&times;</span>
+		<form id="loginForm" onsubmit="formSubmit(event, 'loginForm', 'modalLogin', 'cbLogin', 'sendLogin')">
+			<fieldset>
+				<legend><span class="number">1</span> User Infomation</legend>
+				<input type="text" name="userName" placeholder="Your Name *" class="fName">
+				<input type="text" name="password" placeholder="Password">
+			</fieldset>
+			<fieldset>
+				<div id="cbLogin" class="hidden">
+					<br>
+					<legend><span class="number">3</span> Success!</legend>
+					<label class="question">Your data has been successfully logged!</label>
+				</div>
+			</fieldset>
+			<input type="hidden" name="ID" value="">
+			<input type="hidden" name="timestamp" id="timestamp" value="">
+			<input type="hidden" name="buttonPicked" value="login">
+			<input type="hidden" name="application" value="web">
+			<input type="submit" value="Submit" id="sendLogin"/>
+		</form>
+	</div>
+</body>
+
+
+</html>

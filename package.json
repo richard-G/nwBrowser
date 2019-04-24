@@ -1,0 +1,28 @@
+{
+  "name": "nwdata-web",
+  "version": "1.0.0",
+  "description": "web application for networkingwaterdata",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richard-G/nwBrowser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richard-G/nwBrowser/issues"
+  },
+  "homepage": "https://github.com/richard-G/nwBrowser#readme",
+  "dependencies": {
+    "auth0-js": "^9.10.0",
+    "auth0-lock": "^11.14.0",
+    "aws-amplify": "^1.1.23"
+  },
+  "devDependencies": {
+    "serve": "^10.1.2"
+  }
+}
