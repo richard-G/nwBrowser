@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "nwbrowser-20190424150016-authRole",
+            "UnauthRoleArn": "arn:aws:iam::110390950343:role/nwbrowser-20190424150016-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::110390950343:role/nwbrowser-20190424150016-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "nwbrowser-20190424150016-deployment",
+            "UnauthRoleName": "nwbrowser-20190424150016-unauthRole",
+            "StackName": "nwbrowser-20190424150016",
+            "StackId": "arn:aws:cloudformation:us-east-1:110390950343:stack/nwbrowser-20190424150016/49df2120-6699-11e9-b57f-12c395c1242e"
+        }
+    }
+}

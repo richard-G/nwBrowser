@@ -130,8 +130,8 @@ html {
 .modalMap1 {
     display: none;
     position: absolute;
-    top: 98px;
     left: 10px;
+    right: 10px;
     overflow: auto;
     height: calc(100vh - 110px);
     width: calc(100vw - 30px);
@@ -139,11 +139,31 @@ html {
     max-width: 500px;
     background-color: #f4f7f8;
     border-radius: 5px;
-    padding: 5px;
+    z-index: 2;
+    margin: 0 auto;
 }
 
 .noMargin {
-    margin-bottom: 0px;
+    /*margin-bottom: 0px;*/
+    margin-top: 0px;
+    line-height: 36px;
+    border-radius: 0 5px;
+    width: 50px;
+    height: 50px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    position: absolute;
+    right: 0px;
+    padding: 5px;
+    padding-right: 2px;
+    z-index: 5;
+    background-color: white;
+    opacity: 0.9;
+}
+
+.noMargin:hover {
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
 }
 
 .padded {
@@ -151,8 +171,8 @@ html {
 }
 
 #map {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-color: black;
     border: thick solid 2px;
 }
@@ -172,9 +192,26 @@ html {
     overflow-y: auto;
     text-align: center;
     text-transform: initial;
-    height: calc(100vh - (93px));   /*probably a cleaner way to doing this, 97px is right i think, +bottom padding, changed to 93 (was 117) 18/02/19*/
+    max-height: calc(100vh - (93px));   /*probably a cleaner way to doing this, 97px is right i think, +bottom padding, changed to 93 (was 117) 18/02/19*/
     padding-bottom: 20px;
 }
+
+.loginText {
+    color:#FFFFFF;
+/*    overflow-x: hidden;*/
+    text-align: center;
+    text-transform: initial;
+}
+
+.content {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    max-height: calc(100vh - (93px));   /*probably a cleaner way to doing this, 97px is right i think, +bottom padding, changed to 93 (was 117) 18/02/19*/
+    padding-bottom: 20px;
+    overflow-y: auto;
+}
+
+
 
 .textL {
     color:#FFFFFF;
@@ -445,5 +482,12 @@ a {
 @media only screen and (max-width: 350px) {
     .utilities .left {
         font-size: 12px;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    .modalMap1 {
+        position: absolute;
+        top: 100px;
     }
 }
