@@ -119,6 +119,39 @@ html {
     color: black;
 }
 
+.popup {
+    display: none;
+    z-index: 20;
+    background: blue;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 200px;
+    overflow: auto;
+    /*height: calc(100vh - 110px);*/
+    width: calc(100vw - 150px);
+    /*max-height: 500px;*/
+    max-width: 300px;
+    background-color: #f4f7f8;
+    border-radius: 5px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+#dialogue, #dialogueLogin {
+    margin: 5px;
+    text-transform: initial;
+}
+
+.welcome {
+    color: white;
+    z-index: 5;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    text-transform: initial;
+}
+
 .big {
     font-size: 60px;
 }
@@ -306,15 +339,28 @@ html {
 }
 
 .utilities .right {
-    margin: 10px 10px 5px 5px;
+    margin: 5px 10px 10px 5px;
 }
 
 .utilities .left {
-    margin: 10px 5px 5px 10px;
+    margin: 5px 5px 10px 10px;
 }
 
 .utilities .lower {
     margin: 5px 10px 10px 10px;
+}
+
+
+.bare {
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.bare:hover {
+    color: #A8AD80;
+    transition: color .1s ease-in;
 }
 
 .tlight {

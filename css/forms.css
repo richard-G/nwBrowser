@@ -14,14 +14,17 @@
   max-height: calc(100vh - 100px);
   overflow: auto;
 }
-#loginForm {
+.fName {
+  margin-bottom: 5px !important;
+}
+#signUpDiv {
   display: block;
   position: relative;
   top: -10px;
   margin: 0 auto;
   max-height: 1000px;
 }
-#loginForm button {
+#signUpDiv button {
   font-family: Georgia, "Times New Roman", Times, serif;
   background: rgba(255,255,255,.1);
   border: none;
@@ -41,10 +44,20 @@
   margin-bottom: 30px;
   cursor: pointer;
 }
-#loginForm button:hover {
+#signUpDiv button:hover {
   background: #d2d9dd;
   color: white;
   transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+#loginDiv {
+  position: absolute;
+  top: 100px;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  margin: 0 10vw 0 10vw;
+  max-width: 300px;
 }
 
 .styled fieldset{

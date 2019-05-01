@@ -13,18 +13,23 @@ var setupMap = function() {
         closeMap = document.getElementById("closeMap");
         behindMap = document.getElementById('behindMap');
         behindMap2 = document.getElementById('behindMap2');
+        signUpForm = document.getElementById('signUpForm');
 
     signalModal.onclick = function() {
         modalMap.style.display = "block";
         behindMap.style.opacity = 0.5;
         behindMap2.style.opacity = 0.5;
+        signUpForm.style.opacity = 0.5;
     }
 
     closeMap.onclick = function() {
         modalMap.style.display = "none";
         behindMap.style.opacity = 1;
         behindMap2.style.opacity = 1;
+        signUpForm.style.opacity = 1;
     }
+
+
 
 }
 

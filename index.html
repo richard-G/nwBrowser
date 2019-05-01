@@ -11,10 +11,11 @@
     https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" /> 
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--<script type="text/javascript" src="js/cordova.js"></script> REMOVED 24/04/19-->
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/cordova.js"></script>
+    
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/forms.css" />
 
     <!--favicon info-->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -30,21 +31,29 @@
 </head>
 
 <body class="frontpage">
-    <div class="header">
-        <h1>Networking Water</h1>
-    </div>
 
-    <div class="tab">
-        <a href='index.html'><button class="tab_btn">Home</button></a>
-        <a href="pages/whoWeAre.html"><button class="tab_btn">Who We Are</button></a>
-        <a href="pages/takePart.html"><button class="tab_btn">How to Take Part</button></a>
-        <a href="pages/whyGetInvolved.html"><button class="tab_btn">Why Get Involved</button></a>
-        <a href="pages/supportUs.html"><button class="tab_btn">Support Us</button></a>
-        <a href="https://www.networkingwater.com" target="_blank"><button class="tab_btn">Our Website</button></a>
-    </div>
+    <div id="background">
+        <div class="header">
+            <h1>Networking Water</h1>
+        </div>
+
+        <div class="tab">
+            <a href='index.html'><button class="tab_btn">Home</button></a>
+            <a href="pages/whoWeAre.html"><button class="tab_btn">Who We Are</button></a>
+            <a href="pages/takePart.html"><button class="tab_btn">How to Take Part</button></a>
+            <a href="pages/whyGetInvolved.html"><button class="tab_btn">Why Get Involved</button></a>
+            <a href="pages/supportUs.html"><button class="tab_btn">Support Us</button></a>
+            <a href="https://www.networkingwater.com" target="_blank"><button class="tab_btn">Our Website</button></a>
+        </div>
 
 
-    <div class="wrapper">
+        <div class="wrapper">
+        </div>
+
+        <div class="welcome">
+            <span id="welcome"> You are not logged in</span>
+            <button id="logoutButton" class="bare">logout</button>  
+        </div>
     </div>
 
 <!-- talen out for now
@@ -53,18 +62,53 @@
     </div>
 -->
 
-    <div class="utilities">
-        <div class="utilUpper">
-            <a href="pages/loginAuth.html"><button class="btn left">Login</button></a>
-            <button id="signUpButton" class="btn right">Login</button>
-        </div>
+    <div class="styled form hidden" id="loginDiv">
+        <span id="closeLogin" class="close">&times;</span>
+        <form id="loginForm">
+            <fieldset>
+                <legend><span class="number">1</span> User Infomation</legend>
+                <input type="text" name="usernameField" placeholder="Username *" class="fName" required>
+                <input type="text" name="passwordField" placeholder="Password *" required>
+            </fieldset>
+            <fieldset>
+                <div id="cbLogin" class="hidden">
+                    <br>
+                    <legend><span class="number">2</span> Success!</legend>
+                    <label class="question">You have successfully logged in!</label>
+                </div>
+            </fieldset>
 
-        <div class="utilLower">
-            <a href="pages/breakInService.html" class="btn lower">Log Your Data!</a>
-        </div>
+            <input type="hidden" name="application" value="web">
+            <input type="submit" value="Log in" id="loginSubmit"/>
+        </form>
     </div>
 
+    <div class="popup" id="popupLogin">
+        <span  id="closePopupLogin" class="close">&times;</span>
+        <p id="dialogueLogin">Error: Please ensure that all fields are correctly filled out</p>
+    </div>
+
+    <div id="background2">
+
+        <div class="utilities utilLower" id="utilUpper">
+            <button id="createAccountPage" class="btn left">Create An Account</button>
+            <button id="loginButton" class="btn right">Log in</button>
+        </div>
+
+        <div class="utilities utilLower" id="utilLower">
+            <a href="pages/breakInService.html" class="btn lower" id="logDataButton">Log Your Data!</a>
+        </div>
+
+    </div>  
+
+    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="main.bundle.js"></script>
+
+    <!--
+    <script type="text/javascript">
+        //initializeIndex(); //not working?
+    </script>
+    -->
 
 </body>
 

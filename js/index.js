@@ -23,18 +23,25 @@ function onDeviceReady() {
     StatusBar.styleLightContent();
 }*/ //removed for web app
 
-var openWeb = function() {
-    cordova.InAppBrowser.open('https://www.networkingwater.com', '_blank', 'location=yes');
-}
+const createAccountPage = document.getElementById('createAccountPage');
+createAccountPage.addEventListener('click', () => {
+	location.href = 'pages/loginAuth.html';
+});
 
-var openDonate = function() {
-    cordova.InAppBrowser.open('https://www.wateraid.org/donate', '_blank', 'location=yes');
-}
+const loginDiv = document.getElementById('loginDiv');
+const loginButton = document.getElementById('loginButton');
+const background = document.getElementById('background');
+const background2 = document.getElementById('background2');
+const closeLogin = document.getElementById('closeLogin');
 
-var openQ = function() {
-    cordova.InAppBrowser.open('https://imperial.eu.qualtrics.com/jfe/form/SV_0NUlFWS9PTRowxT','_blank','location=yes');
-};
+loginButton.addEventListener('click', () => {
+	loginDiv.style.display = "block";
+	background.style.opacity = 0.5;
+	background2.style.opacity = 0.5;
+});
 
-var openQPE = function() {
-	cordova.InAppBrowser.open('https://imperial.eu.qualtrics.com/jfe/form/SV_2t6VHYLVT4DFMJn','_blank','location=yes');
-}
+closeLogin.addEventListener('click', () => {
+	loginDiv.style.display = "none";
+	background.style.opacity = 1;
+	background2.style.opacity = 1;
+})
