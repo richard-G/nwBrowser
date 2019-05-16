@@ -7,7 +7,7 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="msapplication-tap-highlight" content="no" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
-	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
@@ -30,6 +30,7 @@
 	<script type="text/javascript" src="../js/cordova.js"></script>
 	<script type="text/javascript" src="../js/breakInService.js"></script>
 	<script type="text/javascript" src="../js/createAnAccount.js"></script>
+	
 
 	<div id="behind">
 
@@ -47,7 +48,7 @@
 			<a href="https://www.networkingwater.com" target="_blank"><button class="tab_btn">Our Website</button></a>
 		</div>
 
-		<div class="text">
+		<div class="text" id="visibleText">
 			<p>
 				This page can be used to log your water supply performances over the day. Please visit our <b>take part</b> page before logging data!
 			</p>
@@ -64,8 +65,13 @@
 				If you've experienced a period of reduction in the water pressure or quality, press the <span style="color:red">red</span> button.
 			</p>
 
-			<button id="signalWG" class="tlight green"></button >
-			<button id="signalWR" class="tlight red"></button>
+			<div id="buttons">
+				<button id="signalWG" class="tlight green"></button>
+				<button id="signalWR" class="tlight red"></button>
+			</div>
+
+			<div id="notLoggedIn">
+			</div>
 		</div>
 	</div>
 
@@ -75,12 +81,12 @@
 
 	<div class="styled form" id="modalWR">
 		<span id="closeWR" class="close">&times;</span>
-		<form id="WRForm" onsubmit="formSubmit(event, 'WRForm', 'modalWR', 'cbWR', 'sendWR')">
+		<!--<form id="WRForm" onsubmit="formSubmit(event, 'WRForm', 'modalWR', 'cbWR', 'sendWR')">-->
+		<form id="WRForm">
 			<div id="userInfo">
 				<fieldset>
 					<legend><span class="number">1</span> User Infomation</legend>
-					<input type="text" name="firstName" placeholder="Your Name *" class="fName">
-					<input type="text" name="lastName" placeholder="Last Name *">
+					<input type="text" name="firstName" placeholder="Your Name *">
 				</fieldset>
 			</div>
 			<fieldset>
@@ -152,6 +158,8 @@
 			</fieldset>
 			<input type="hidden" name="ID" value="">
 			<input type="hidden" name="timestamp" id="timestamp" value="">
+			<input type="hidden" name="latitude" value="">
+			<input type="hidden" name="longitude" value="">
 			<input type="hidden" name="buttonPicked" value="waterRed">
 			<input type="hidden" name="application" value="web">
 			<input type="submit" value="Submit" id="sendWR"/>
@@ -160,11 +168,12 @@
 
 	<div class="styled form" id="modalWG">
 		<span id="closeWG" class="close">&times;</span>
-		<form id="WGForm" onsubmit="formSubmit(event, 'WGForm', 'modalWG', 'cbWG', 'sendWG')">
+		<!--<form id="WGForm" onsubmit="formSubmit(event, 'WGForm', 'modalWG', 'cbWG', 'sendWG')">-->
+		<form id="WGForm">
+
 			<fieldset>
 				<legend><span class="number">1</span> User Infomation</legend>
-				<input type="text" name="firstName" placeholder="Your Name *" class="fName">
-				<input type="text" name="lastName" placeholder="Last Name *">
+				<input type="text" name="firstName" placeholder="Your Name *">
 			</fieldset>
 			<fieldset>
 				<legend><span class="number">2</span> Water Service, Green</legend>
@@ -177,15 +186,21 @@
 			</fieldset>
 			<input type="hidden" name="ID" value="">
 			<input type="hidden" name="timestamp" id="timestamp" value="">
+			<input type="hidden" name="latitude" value="">
+			<input type="hidden" name="longitude" value="">
 			<input type="hidden" name="buttonPicked" value="waterGreen">
 			<input type="hidden" name="application" value="web">
 			<input type="submit" value="Submit" id="sendWG"/>
 		</form>
 	</div>
 
+	
+
 	<script type="text/javascript">
         initialize();
     </script>
+
+    <script type="text/javascript" src="../main.bundle.js"></script>
 
 </body>
 

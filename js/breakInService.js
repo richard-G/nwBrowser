@@ -146,7 +146,7 @@ function smartForm() {
 }
 
 
-
+/*
 //converts data collected from the form
 function formSubmit(event, formID, modalID, sucCB, sendB) {
     event.preventDefault();
@@ -184,3 +184,4 @@ function formSend(form) {
      }
  });
 }
+*/

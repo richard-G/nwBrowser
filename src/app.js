@@ -11,6 +11,7 @@ const initializeIndex = () => {
     document.addEventListener('deviceready', onDeviceReady, false);
 } */
 
+//init for index.html
 const onDeviceReady = () => {
     const utilLower = document.getElementById('utilLower');
     const utilUpper = document.getElementById('utilUpper');
@@ -26,6 +27,111 @@ const onDeviceReady = () => {
 }
 
 
+
+//init for breakInService.html
+const onDeviceReadyBreak = async () => {
+
+    const ifLoggedIn = async () => {
+        if (await isAuthenticated()) {
+            
+        } else {
+            const buttons = document.getElementById('buttons');
+            const notLoggedIn = document.getElementById('notLoggedIn');
+            const visibleText = document.getElementById('visibleText');
+            buttons.style.display = "none";
+            visibleText.innerHTML = "<br><br>You are not logged in, please log in to continue."
+        }
+    }
+
+    const WRForm = document.getElementById('WRForm');
+    if (WRForm) {
+        WRForm.addEventListener('submit', evt => {
+            evt.preventDefault();
+            formSubmit(event, 'WRForm', 'modalWR', 'cbWR', 'sendWR');
+        });
+    }
+    const WGForm = document.getElementById('WGForm');
+    if (WGForm) {
+        WGForm.addEventListener('submit', evt => {
+            evt.preventDefault();
+            formSubmit(event, 'WGForm', 'modalWG', 'cbWG', 'sendWG');
+            console.log('you got to here');
+        });
+    }
+
+    const user = await Auth.currentAuthenticatedUser({
+        bypassCache: false
+    });
+
+    //converts data collected from the form
+    async function formSubmit(event, formID, modalID, sucCB, sendB) {
+        event.preventDefault();
+
+        /*
+        Auth.currentAuthenticatedUser({
+            bypassCache: false
+        })
+        .then(user => {
+            console.log(user);
+            const latitude = user.attributes['custom:latitude'];
+            const longitude = user.attributes['custom:longitude'];
+        })
+        */
+
+        const user = await Auth.currentAuthenticatedUser({
+            bypassCache: false
+        });
+
+        console.log(user);
+        
+        var form = $('#'+formID);
+        var id = document.getElementById(formID).ID;
+        id.value = Math.floor((Math.random() * 100000000) + 1);
+        var timestamp = document.getElementById(formID).timestamp;
+        timestamp.value = Date();
+        const latitude = document.getElementById(formID).latitude;
+        const longitude = document.getElementById(formID).longitude;
+
+        latitude.value = user.attributes['custom:latitude'];
+        longitude.value = user.attributes['custom:longitude'];
+
+
+        //remove all inputs with no values
+        form.find(":input").filter(function(){ return !this.value; }).attr("disabled", "disabled");
+
+        formSend(form); //added for web
+
+        var sucCB = document.getElementById(sucCB);
+            sendB = document.getElementById(sendB);
+        sendB.style.display = "none";
+        sucCB.style.display = "block";
+    }
+
+    //sends converted data to server through ajax
+    function formSend(form) {
+        $.ajax({
+         type: "POST",
+         url: "https://xdfz4o3cjk.execute-api.eu-west-2.amazonaws.com/live/networkingwater",
+         data: form.serialize(),
+         dataType: 'x-www-form-urlencoded',
+         contentType: 'application/x-www-form-urlencoded',
+         success: function(data)
+         {
+             alert("Data Submitted!");
+             console.log('submit successful')
+         }
+     });
+    }
+
+    
+
+
+
+    
+
+    ifLoggedIn();
+}
+
 //boolean depending on whether the user is logged in
 const isAuthenticated = async () => {
     try {
@@ -37,6 +143,7 @@ const isAuthenticated = async () => {
         return false
     };
 };
+
 
 //handles what buttons will be visible depending on whether user is logged in
 const refreshView = async () => {
@@ -210,9 +317,28 @@ const logoutButton = document.getElementById('logoutButton');
 if (logoutButton) {
     logoutButton.addEventListener('click', signOut);
 }
+
+
+
+
 //signUpForm.addEventListener('submit', signUp);
-// temp fix to initialize specific page
+
+
+// temp fix to initialize specific pages
+//index.html
 const loginDiv = document.getElementById('loginDiv');
 if (loginDiv) {
     onDeviceReady();
 };
+//breakInService.html
+/*
+const signalWR = document.getElementById('signalWR');
+if (signalWR) {
+    onDeviceReadyBreak();
+};
+*/
+if (window.location.pathname == "/pages/breakInService.html") {
+    onDeviceReadyBreak();
+}
+
+console.log(window.location.pathname);
