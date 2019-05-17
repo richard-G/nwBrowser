@@ -203,6 +203,10 @@ html {
     padding: 5px;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 #map {
     width: 100%;
     height: 100%;
@@ -398,6 +402,12 @@ html {
     background: none;
     margin-left: 10px;
     cursor: pointer;
+    transition: font-size .2s ease-in-out;
+}
+
+.tab_btn:hover {
+    font-size: 1.2rem;
+    transition: font-size .2s ease-in-out;
 }
 
 .return{
@@ -482,14 +492,15 @@ a {
         margin: 0 auto;
         overflow: auto;
         background: url(../img/watervalveLandscape.jpg) no-repeat top center;
-        max-width: 1250px;
+        /*max-width: 1250px;*/
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         -moz-background-size: contain;
         -o-background-size: contain;
         background-size: contain;
         overflow-y: hidden;
-        height: calc(100vh - 224px);
+        /*height: calc(100vh - 224px);*/
+        height: calc(100vh - 160px);
     }
     /*
     .utilities {

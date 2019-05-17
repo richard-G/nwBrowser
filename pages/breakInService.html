@@ -29,7 +29,6 @@
 <body>
 	<script type="text/javascript" src="../js/cordova.js"></script>
 	<script type="text/javascript" src="../js/breakInService.js"></script>
-	<script type="text/javascript" src="../js/createAnAccount.js"></script>
 	
 
 	<div id="behind">
@@ -41,10 +40,8 @@
 
 		<div class="tab">
 			<a href='../index.html'><button class="tab_btn">Home</button></a>
-			<a href="whoWeAre.html"><button class="tab_btn">Who We Are</button></a>
 			<a href="takePart.html"><button class="tab_btn">How to Take Part</button></a>
-			<a href="whyGetInvolved.html"><button class="tab_btn">Why Get Involved</button></a>
-			<a href="supportUs.html"><button class="tab_btn">Support Us</button></a>
+			<a href="contactUs.html"><button class="tab_btn">Contact Us</button></a>
 			<a href="https://www.networkingwater.com" target="_blank"><button class="tab_btn">Our Website</button></a>
 		</div>
 
@@ -83,14 +80,16 @@
 		<span id="closeWR" class="close">&times;</span>
 		<!--<form id="WRForm" onsubmit="formSubmit(event, 'WRForm', 'modalWR', 'cbWR', 'sendWR')">-->
 		<form id="WRForm">
+			<!--
 			<div id="userInfo">
 				<fieldset>
 					<legend><span class="number">1</span> User Infomation</legend>
 					<input type="text" name="firstName" placeholder="Your Name *">
 				</fieldset>
 			</div>
+			-->
 			<fieldset>
-				<legend><span class="number">2</span> Water Service, Red</legend>
+				<legend><span class="number">1</span> Water Service, Red</legend>
 				<div id="intro">
 					<label class="question">Did you experience a cut in the water supply?</label>
 					<div class="inputGroup">
@@ -152,7 +151,7 @@
 					</div>
 				</div>
 				<div id="cbWR" class="hidden">
-					<legend><span class="number">3</span> Success!</legend>
+					<legend><span class="number">2</span> Success!</legend>
 					<label class="question">Your data has been successfully logged!</label>
 				</div>
 			</fieldset>
@@ -160,6 +159,7 @@
 			<input type="hidden" name="timestamp" id="timestamp" value="">
 			<input type="hidden" name="latitude" value="">
 			<input type="hidden" name="longitude" value="">
+			<input type="hidden" name="username" value="">
 			<input type="hidden" name="buttonPicked" value="waterRed">
 			<input type="hidden" name="application" value="web">
 			<input type="submit" value="Submit" id="sendWR"/>
@@ -170,17 +170,18 @@
 		<span id="closeWG" class="close">&times;</span>
 		<!--<form id="WGForm" onsubmit="formSubmit(event, 'WGForm', 'modalWG', 'cbWG', 'sendWG')">-->
 		<form id="WGForm">
-
+			<!--
 			<fieldset>
 				<legend><span class="number">1</span> User Infomation</legend>
 				<input type="text" name="firstName" placeholder="Your Name *">
 			</fieldset>
+			-->
 			<fieldset>
-				<legend><span class="number">2</span> Water Service, Green</legend>
+				<legend><span class="number">1</span> Water Service, Green</legend>
 				<label class="question">Please press submit to confirm that there has been an uninterrupted water service since your last log</label>
 				<div id="cbWG" class="hidden">
 					<br>
-					<legend><span class="number">3</span> Success!</legend>
+					<legend><span class="number">2</span> Success!</legend>
 					<label class="question">Your data has been successfully logged!</label>
 				</div>
 			</fieldset>
@@ -188,6 +189,7 @@
 			<input type="hidden" name="timestamp" id="timestamp" value="">
 			<input type="hidden" name="latitude" value="">
 			<input type="hidden" name="longitude" value="">
+			<input type="hidden" name="username" value="">
 			<input type="hidden" name="buttonPicked" value="waterGreen">
 			<input type="hidden" name="application" value="web">
 			<input type="submit" value="Submit" id="sendWG"/>

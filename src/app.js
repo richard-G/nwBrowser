@@ -59,9 +59,6 @@ const onDeviceReadyBreak = async () => {
         });
     }
 
-    const user = await Auth.currentAuthenticatedUser({
-        bypassCache: false
-    });
 
     //converts data collected from the form
     async function formSubmit(event, formID, modalID, sucCB, sendB) {
@@ -91,9 +88,11 @@ const onDeviceReadyBreak = async () => {
         timestamp.value = Date();
         const latitude = document.getElementById(formID).latitude;
         const longitude = document.getElementById(formID).longitude;
+        const username = document.getElementById(formID).username;
 
         latitude.value = user.attributes['custom:latitude'];
         longitude.value = user.attributes['custom:longitude'];
+        username.value = user.username;
 
 
         //remove all inputs with no values
@@ -123,11 +122,6 @@ const onDeviceReadyBreak = async () => {
      });
     }
 
-    
-
-
-
-    
 
     ifLoggedIn();
 }
@@ -340,5 +334,6 @@ if (signalWR) {
 if (window.location.pathname == "/pages/breakInService.html") {
     onDeviceReadyBreak();
 }
+// this needs to wait.
 
 console.log(window.location.pathname);

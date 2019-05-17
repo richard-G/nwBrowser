@@ -51,8 +51,8 @@ var setupModal = function() {
 //declare all vars relating to water, red
 var declarevars = function() {
 
-    var userInfo = document.getElementById('userInfo');
-        intro = document.getElementById('intro');
+    //var userInfo = document.getElementById('userInfo');
+    var intro = document.getElementById('intro');
         next = document.getElementById('next');
         typeO = document.getElementById('typeO');
         condO = document.getElementById('condO');
@@ -73,7 +73,7 @@ var declarevars = function() {
 
     //determines what questions will be asked on page 2
     loadNext.onclick = function () {
-        userInfo.style.display = "none";
+        //userInfo.style.display = "none";
         intro.style.display = "none";
         next.style.display = "block";
         if (reductionQuality.checked) {

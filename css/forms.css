@@ -79,6 +79,7 @@
 .styled input[type="search"],
 .styled input[type="time"],
 .styled input[type="url"],
+.styled input[type="password"],
 .styled textarea,
 .styled select {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -107,6 +108,7 @@
 .styled input[type="search"]:focus,
 .styled input[type="time"]:focus,
 .styled input[type="url"]:focus,
+.styled input[type="password"]:focus,
 .styled textarea:focus,
 .styled select:focus{
   background: #d2d9dd;

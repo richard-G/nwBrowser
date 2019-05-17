@@ -25,7 +25,7 @@ function onDeviceReady() {
 
 const createAccountPage = document.getElementById('createAccountPage');
 createAccountPage.addEventListener('click', () => {
-	location.href = 'pages/loginAuth.html';
+	location.href = 'pages/createAccount.html';
 });
 
 const loginDiv = document.getElementById('loginDiv');
