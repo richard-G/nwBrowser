@@ -64,6 +64,10 @@ module.exports = {
             {
                 from: 'site.webmanifest',
                 to: 'site.webmanifest'
+            },
+            {
+                from: 'www',
+                to: 'www'
             }
             ]),
         new webpack.HotModuleReplacementPlugin()
