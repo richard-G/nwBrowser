@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.NetworkingWater.NWData" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Networking Water</name>
+<widget id="com.NetworkingWater.NWData" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>NW Data</name>
     <description>
         Data aggregator application for the monitoring of water and power supply services.
     </description>
@@ -20,6 +20,9 @@
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#ee6e73" />
     <preference name="StatusBarStyle" value="blacktranslucent" />
+    <platform name="android">
+        <icon src="res/icon/android/icon.png" />
+    </platform>
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <engine name="android" spec="^7.1.4" />
 </widget>
