@@ -1,0 +1,50 @@
+
+
+
+.nextB {
+	position: relative;
+  	display: block;
+    padding: 19px 39px 18px 39px;
+    border-radius: 4px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1a8bbc;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #146F96;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.nextB:hover {
+	background: #146F96;
+	cursor: pointer;
+}
+
+#next, #condO, #typeO, #timeBackQ, #loadNext {
+	display: none;
+}
+/*
+#sendWR,
+#sendWG,
+#sendER,
+#sendEG {
+	display: none;
+}
+*/
+#sendWR {
+	display: none;
+}
+
+
+/* for power red */
+#timebackQER {
+	display: none;
+}
+
+#sendER {
+	display: none;
+}

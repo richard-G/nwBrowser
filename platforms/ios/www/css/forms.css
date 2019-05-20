@@ -1,0 +1,188 @@
+.styled{
+  max-width: 500px;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  margin: 0px 10vw;
+  padding: 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: none;
+  position: absolute;
+  top: 100px;
+  display: none;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+}
+.fName {
+  margin-bottom: 5px !important;
+}
+#signUpDiv {
+  display: block;
+  position: relative;
+  top: -10px;
+  margin: 0 auto;
+  max-height: 1000px;
+}
+#signUpDiv button {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgba(255,255,255,.1);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  background-color: #e8eeef;
+  color:#8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+#signUpDiv button:hover {
+  background: #d2d9dd;
+  color: white;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+#loginDiv {
+  position: absolute;
+  top: 100px;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  margin: 0 10vw 0 10vw;
+  max-width: 300px;
+}
+
+.styled fieldset{
+  border: none;
+}
+.styled legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.styled label {
+  display: block;
+  margin-bottom: 8px;
+}
+.styled input[type="text"],
+.styled input[type="date"],
+.styled input[type="datetime"],
+.styled input[type="email"],
+.styled input[type="number"],
+.styled input[type="search"],
+.styled input[type="time"],
+.styled input[type="url"],
+.styled input[type="password"],
+.styled textarea,
+.styled select {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgba(255,255,255,.1);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  background-color: #e8eeef;
+  color:#8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+.styled input[type="text"]:focus,
+.styled input[type="date"]:focus,
+.styled input[type="datetime"]:focus,
+.styled input[type="email"]:focus,
+.styled input[type="number"]:focus,
+.styled input[type="search"]:focus,
+.styled input[type="time"]:focus,
+.styled input[type="url"]:focus,
+.styled input[type="password"]:focus,
+.styled textarea:focus,
+.styled select:focus{
+  background: #d2d9dd;
+}
+.styled select{
+  -webkit-appearance: menulist-button;
+  height:35px;
+}
+.styled .number {
+  background: #1a8bbc;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 0px 15px 15px 15px;
+}
+
+.styled input[type="submit"],
+.styled input[type="button"]
+{
+  position: relative;
+  display: block;
+  padding: 19px 39px 18px 39px;
+  border-radius: 4px;
+  color: #FFF;
+  margin: 0 auto;
+  background: #1a8bbc;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  width: 100%;
+  border: 1px solid #146F96;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+}
+.styled input[type="submit"]:hover,
+.styled input[type="button"]:hover
+{
+  background: #146F96;
+  cursor: pointer;
+}
+.question {
+  color: #454B50;
+  /*font-size: 0.8em;*/
+}
+
+
+/*
+.locateButton {
+  position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    border-radius: 4px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1a8bbc;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #146F96;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.locateButton:hover {
+  background: #146F96;
+  cursor: pointer;
+}
+
+*/

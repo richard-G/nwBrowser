@@ -23,5 +23,5 @@
     <platform name="ios">
         <icon src="res/icon/ios/icon.png" />
     </platform>
-    <engine name="ios" spec="^4.5.5" />
+    <engine name="ios" spec="~4.5.5" />
 </widget>
