@@ -119,6 +119,15 @@ html {
     color: black;
 }
 
+.footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.7rem;
+    text-align: center;
+    left: 0;
+    width: 100%;
+}
+
 .popup {
     display: none;
     z-index: 20;
