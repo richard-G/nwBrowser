@@ -325,15 +325,15 @@ if (loginDiv) {
     onDeviceReady();
 };
 //breakInService.html
-/*
+
 const signalWR = document.getElementById('signalWR');
 if (signalWR) {
     onDeviceReadyBreak();
 };
-*/
+/*
 if (window.location.pathname == "/pages/breakInService.html") {
     onDeviceReadyBreak();
 }
 // this needs to wait.
-
+*/
 console.log(window.location.pathname);
