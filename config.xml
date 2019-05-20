@@ -21,4 +21,5 @@
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#ee6e73" />
     <preference name="StatusBarStyle" value="blacktranslucent" />
+    <engine name="ios" spec="^4.5.5" />
 </widget>
