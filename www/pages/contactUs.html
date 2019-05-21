@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="msapplication-tap-highlight" content="no" />
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=device-height viewport-fit=cover" />
 	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
 
 
@@ -28,6 +28,10 @@
 
 <body>
 
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.3"></script>
+
+	<!--
 	<script>
 		window.fbAsyncInit = function() {
 			FB.init({
@@ -39,6 +43,7 @@
 	  	};
 	</script>
 	<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+-->
 
 	<div id="behind">
 
@@ -58,19 +63,17 @@
 			<p>
 				Do you have any ideas about how we could improve our application or volunteer organization? <br><br>
 				Perhaps you have some questions? <br><br>
-				Don't be shy! Use the message box below to get in touch with a researcher from Networking Water and we'll get back to you as soon as possible! 
+				Don't be shy! Find our facebook page below and send us a message to get in touch with a researcher from Networking Water, we'll get back to you as soon as possible!
+			</p>
 
 
-			<div class="fb-page" data-href="https://www.facebook.com/NetworkingWater/" data-tabs="messages" data-width="" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-				<blockquote cite="https://www.facebook.com/NetworkingWater/" class="fb-xfbml-parse-ignore">
-					<a href="https://www.facebook.com/NetworkingWater/">Networking Water</a>
-				</blockquote>
+			<div class="fb-page" data-href="https://www.facebook.com/NetworkingWater/" data-tabs="" data-width="" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
 			</div>
 	</div>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/cordova.js"></script>
-	<script type="text/javascript" src="../js/contactUs.js"></script>
+	<!--<script type="text/javascript" src="../js/contactUs.js"></script>-->
 
 </body>
 

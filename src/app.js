@@ -64,17 +64,6 @@ const onDeviceReadyBreak = async () => {
     async function formSubmit(event, formID, modalID, sucCB, sendB) {
         event.preventDefault();
 
-        /*
-        Auth.currentAuthenticatedUser({
-            bypassCache: false
-        })
-        .then(user => {
-            console.log(user);
-            const latitude = user.attributes['custom:latitude'];
-            const longitude = user.attributes['custom:longitude'];
-        })
-        */
-
         const user = await Auth.currentAuthenticatedUser({
             bypassCache: false
         });
@@ -100,10 +89,11 @@ const onDeviceReadyBreak = async () => {
 
         formSend(form); //added for web
 
-        var sucCB = document.getElementById(sucCB);
-            sendB = document.getElementById(sendB);
-        sendB.style.display = "none";
-        sucCB.style.display = "block";
+        let successCB = document.getElementById(sucCB);
+        let sendingB = document.getElementById(sendB);
+        successCB.style.display = "block";
+        sendingB.style.display = "none";
+        successCB.style.display = "block";
     }
 
     //sends converted data to server through ajax
