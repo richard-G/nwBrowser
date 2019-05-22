@@ -7,7 +7,8 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=device-height viewport-fit=cover" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' gap: wss: ws:; style-src 'self' 'unsafe-inline'; media-src  *
+    https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" /> 
 
 	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 
@@ -32,7 +33,7 @@
         <a href='../index.html'><button class="tab_btn">Home</button></a>
         <a href="takePart.html"><button class="tab_btn">How to Take Part</button></a>
         <a href="contactUs.html"><button class="tab_btn">Contact Us</button></a>
-        <a href="https://www.networkingwater.com" target="_blank"><button class="tab_btn">Our Website</button></a>
+        <a onclick="openWeb()"><button class="tab_btn">Our Website</button></a>
     </div>
 
     <div class="text">
@@ -40,7 +41,7 @@
             Taking part is easy, just complete the steps below and you'll be ready to start logging your data.
         </p>
         <p>
-            1. Take our questionnaire, this can be found <i><a class="bare underline" href="https://imperial.eu.qualtrics.com/jfe/form/SV_0NUlFWS9PTRowxT" target="_blank">here.</a></i>
+            1. Take our questionnaire, this can be found <i><a onclick="openQ()" class="bare underline">here.</a></i>
         </p>
         <p>
             2. Create your account
@@ -61,7 +62,8 @@
     </div>
 
 
-    <script type="text/javascript" src="../js/cordova.js"></script>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/links.js"></script>
 
 </body>
 

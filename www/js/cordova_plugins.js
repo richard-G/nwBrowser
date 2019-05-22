@@ -231,7 +231,7 @@ module.exports.metadata =
     "phonegap-plugin-push": "1.8.4",
     "cordova-plugin-statusbar": "2.4.1",
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova-plugin-inappbrowser": "2.0.2",
+    "cordova-plugin-inappbrowser": "3.0.0", //was 2.0.2
     "cordova-plugin-datepicker": "0.9.3" //removed comma here!
     //"cordova-plugin-file": "6.0.1"
 }
