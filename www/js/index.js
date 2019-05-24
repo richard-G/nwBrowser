@@ -23,6 +23,13 @@ function onDeviceReady() {
     StatusBar.styleLightContent();
 }*/ //removed for web app
 
+document.addEventListener("deviceready", onDeviceReadyIndex, false);
+
+function onDeviceReadyIndex() {
+	window.FirebasePlugin.grantPermission();
+}
+
+
 const createAccountPage = document.getElementById('createAccountPage');
 createAccountPage.addEventListener('click', () => {
 	location.href = 'pages/createAccount.html';
