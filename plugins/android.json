@@ -7,6 +7,9 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.NetworkingWater.NWData"
+    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.NetworkingWater.NWData"
     }

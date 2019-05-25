@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "995067592602",
+    "firebase_url": "https://nw-data-a8194.firebaseio.com",
+    "project_id": "nw-data-a8194",
+    "storage_bucket": "nw-data-a8194.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995067592602:android:0dd08cd46d311e44",
+        "android_client_info": {
+          "package_name": "com.NetworkingWater.NWData"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995067592602-9vtng1514inig94jt9jpg4i9pvr8ub8g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.NetworkingWater.NWData",
+            "certificate_hash": "e0a0a37f55cb6f92aa9eb21560b08367f887c57c"
+          }
+        },
+        {
+          "client_id": "995067592602-7mi8ln4v2opvjp57e4tojelf8gub413a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBao4Dvvo4xNTuytHiVF-i1w1D0hdXOoMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995067592602-7mi8ln4v2opvjp57e4tojelf8gub413a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995067592602-hqiat7d0u1isomdblup723m2kuv91slc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.NetworkingWater.NWData"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
