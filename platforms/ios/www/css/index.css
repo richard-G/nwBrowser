@@ -411,6 +411,10 @@ html {
     background-color: orange;
 }
 
+.facebook {
+    max-width: 80vw;
+}
+
 .tab_btn {
 /*    width: 90px;*/
     height: 40px;
