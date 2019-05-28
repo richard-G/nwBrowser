@@ -10,196 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69f89ff6-9010-4b42-bb5b-d8feb718dede" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_26_1_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_26_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_answers_1_4_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_beta_1_2_7_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_2_9_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_core_2_6_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_16_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_analytics_impl_16_0_8_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_clearcut_16_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_flags_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_phenotype_16_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tagmanager_16_0_8_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tagmanager_api_16_0_8_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_abt_17_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_16_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_config_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_16_0_9_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_18_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_18_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_perf_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_fabric_sdk_android_fabric_1_4_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__me_leolin_ShortcutBadger_1_1_4_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/cordova.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/cordova.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/AuthenticationToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/AuthenticationToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/BuildHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/BuildHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CallbackContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CallbackContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CallbackMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CallbackMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ConfigXmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ConfigXmlParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaArgs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaBridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaClientCertRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaClientCertRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaDialogsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaDialogsHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaHttpAuthHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaHttpAuthHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaInterfaceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaPreferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaPreferences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaResourceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaResourceApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaWebView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaWebViewEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaWebViewEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaWebViewImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CordovaWebViewImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CoreAndroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/CoreAndroid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ExposedJsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ExposedJsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ICordovaClientCertRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ICordovaClientCertRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ICordovaCookieManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ICordovaCookieManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ICordovaHttpAuthHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ICordovaHttpAuthHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/LOG.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/LOG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/NativeToJsMessageQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/NativeToJsMessageQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/PermissionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/PermissionHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/PluginEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/PluginEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/PluginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/PluginManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/PluginResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/PluginResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ResumeCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/ResumeCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/Whitelist.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/Whitelist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemCookieManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemCookieManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemExposedJsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemExposedJsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemWebChromeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemWebChromeClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemWebView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemWebViewClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemWebViewClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemWebViewEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/src/org/apache/cordova/engine/SystemWebViewEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/android.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/release/app.aab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/android/nativeapiprovider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/android/nativeapiprovider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/android/promptbasednativeapi.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/android/promptbasednativeapi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/exec.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/exec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/platform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/plugin/android/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/cordova-js-src/plugin/android/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/cordova.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/cordova.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/cordova_plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/NetworkingWater/NWData/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/NetworkingWater/NWData/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/pages/takePart.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/pages/takePart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-hdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-land-hdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-ldpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-land-ldpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-mdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-land-mdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-xhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-land-xhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-xxhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-land-xxhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-land-xxxhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-land-xxxhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-hdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-port-hdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-ldpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-port-ldpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-mdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-port-mdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-xhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-port-xhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-xxhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-port-xxhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-port-xxxhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-port-xxxhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/android_sdk_version" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/android_sdk_version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/android_sdk_version.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/android_sdk_version.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/build" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/build" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/build.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/check_reqs" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/check_reqs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/check_reqs.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/check_reqs.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/clean" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/clean" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/clean.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/clean.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/defaults.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/defaults.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/Adb.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/Adb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/AndroidManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/AndroidManifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/AndroidProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/AndroidProject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/AndroidStudio.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/AndroidStudio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/android_sdk.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/android_sdk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/builders/GenericBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/builders/GenericBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/builders/GradleBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/builders/GradleBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/builders/StudioBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/builders/StudioBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/builders/builders.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/builders/builders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/check_reqs.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/check_reqs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/device.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/device.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/emulator.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/emulator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/getASPath.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/getASPath.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/install-device" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/install-device" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/install-device.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/install-device.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/install-emulator" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/install-emulator" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/install-emulator.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/install-emulator.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/list-devices" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/list-devices" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/list-devices.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/list-devices.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/list-emulator-images" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/list-emulator-images" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/list-emulator-images.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/list-emulator-images.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/list-started-emulators" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/list-started-emulators" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/list-started-emulators.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/list-started-emulators.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/log.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/log.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/plugin-build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/plugin-build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/pluginHandlers.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/pluginHandlers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/prepare.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/prepare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/retry.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/retry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/run.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/run.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/start-emulator" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/start-emulator" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/lib/start-emulator.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/lib/start-emulator.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/log" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/log.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/log.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/loggingHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/loggingHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/run" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/run" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/run.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/run.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/version" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cordova/version.bat" beforeDir="false" afterPath="$PROJECT_DIR$/cordova/version.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform_www/cordova-js-src/android/nativeapiprovider.js" beforeDir="false" afterPath="$PROJECT_DIR$/platform_www/cordova-js-src/android/nativeapiprovider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform_www/cordova-js-src/android/promptbasednativeapi.js" beforeDir="false" afterPath="$PROJECT_DIR$/platform_www/cordova-js-src/android/promptbasednativeapi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform_www/cordova-js-src/exec.js" beforeDir="false" afterPath="$PROJECT_DIR$/platform_www/cordova-js-src/exec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform_www/cordova-js-src/platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/platform_www/cordova-js-src/platform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform_www/cordova-js-src/plugin/android/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/platform_www/cordova-js-src/plugin/android/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform_www/cordova.js" beforeDir="false" afterPath="$PROJECT_DIR$/platform_www/cordova.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform_www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platform_www/cordova_plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrapper.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/wrapper.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../plugins/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/android.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../plugins/fetch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../plugins/fetch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/pages/takePart.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/pages/takePart.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -218,30 +57,33 @@
     <session id="-281389384">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.5" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="png" value="3" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="3" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="xml" value="253" />
+          <entry key="xml" value="290" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="XML" value="253" />
+          <entry key="XML" value="290" />
         </counts>
       </usages-collector>
     </session>
@@ -251,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+            <state relative-caret-position="306">
+              <caret line="18" column="154" selection-start-line="18" selection-start-column="154" selection-end-line="18" selection-end-column="154" />
               <folding>
                 <element signature="e#1784#1825#0" expanded="true" />
               </folding>
@@ -280,9 +122,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="813" />
-    <option name="width" value="1114" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="733" />
+    <option name="width" value="1194" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -291,6 +133,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -307,15 +152,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="asset &#9;ACTION&#9;NewAndroidImageAsset" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="Nexus_5X_API_28" />
+    <property name="device.picker.selection" value="7def7cee" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.0.1" />
     <property name="sync.plugin.last.upgrade.timestamp" value="1558706772160" />
   </component>
   <component name="RunDashboard">
@@ -416,29 +260,39 @@
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Run" order="0" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="1" sideWeight="0.815032" visible="true" weight="0.4208243" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="1" sideWeight="0.5671642" visible="true" weight="0.4208243" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49946696" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.18496802" side_tool="true" visible="true" weight="0.4208243" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.43283582" side_tool="true" visible="true" weight="0.4208243" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.51679844" weight="0.3023001" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.9104478" weight="0.30151844" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Assistant" order="5" weight="0.23240939" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-ldpi/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+        <state relative-caret-position="306">
+          <caret line="18" column="154" selection-start-line="18" selection-start-column="154" selection-end-line="18" selection-end-column="154" />
           <folding>
             <element signature="e#1784#1825#0" expanded="true" />
           </folding>
