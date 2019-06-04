@@ -92,7 +92,6 @@ function resetModal() {
     typeO.style.display = "none";
     next.style.display = "none";
     sendWR.style.display = "none";
-    userInfo.style.display = "block";
     intro.style.display = "block";
 }
 

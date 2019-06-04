@@ -161,8 +161,21 @@ html {
     text-transform: initial;
 }
 
+.language {
+    color: white;
+    z-index: 5;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    text-transform: initial;
+}
+
 .big {
     font-size: 60px;
+}
+
+.subtitle {
+    font-size: 1.5em;
 }
 
 .blackText {
