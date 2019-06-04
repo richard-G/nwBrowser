@@ -279,7 +279,11 @@ const getObject = () => {
     })
     .catch(err => {
         console.log(err);
-        welcome.innerHTML = "You are not logged in";
+        if (document.getElementById('nepali')) {
+            welcome.innerHTML = "तपाई लग इन हुनुहुन्न";
+        } else {
+            welcome.innerHTML = "You are not logged in";
+        }
     })
 }
 
