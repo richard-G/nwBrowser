@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html> 
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/forms.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/radioNew.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/modals.css">
+
+	<!--favicon info-->
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+	<title>Log Your Data! | Networking Water</title>
+</head>
+
+<body>
+	<script type="text/javascript" src="../js/cordova.js"></script>
+	<script type="text/javascript" src="../js/breakInService.js"></script>
+	
+
+	<div id="behind">
+
+		<div class="header">
+			<h1>लग लग डेटा!</h1>  
+		</div>
+
+
+		<div class="tab">
+	        <a href='index_nep.html'><button class="tab_btn">गृहपृष्ठ</button></a>
+	        <a href="whoWeAre_nep.html"><button class="tab_btn">हामी को हौं</button></a>
+	        <a href="takePart_nep.html"><button class="tab_btn">भाग कसरी लिन</button></a>
+	        <a href="contactUs_nep.html"><button class="tab_btn">हामीलाई सम्पर्क गर्नुहोस</button></a>
+	        <a href="https://www.networkingwater.com" target="_blank"><button class="tab_btn">हाम्रो वेबसाइट</button></a>
+	    </div>
+
+		<div class="text" id="visibleText">
+			<p>
+				यस पृष्ठ को दिन मा आफ्नो पानी को आपूर्ति को प्रदर्शन को लागी लगिन को लागी प्रयोग गर्न सकिन्छ। कृपया डाटा लगिङ अघि हाम्रो <i>"भाग कसरी लिन"</i> पृष्ठमा जानुहोस्!
+			</p>
+			<p>
+				पानी सेवा प्रदर्शनका लागि उचित बटन थिच्नुहोस्। यदि सामान्य प्रदर्शन भन्दा कम थियो भने, हामीलाई कुन समयमा थाहा छ, र कुन समय (यदि सबै मा) यो फिर्ता आउनुभयो।
+			</p>
+			<p class="title">
+				पानी<br>सेवा
+			</p>
+			<p> 
+				यदि तपाइँले तपाइँको अन्तिम बिन्दुबाट तपाईंको पानीको आपूर्तिमा कुनै अवरोधको अनुभव गर्नुभएन भने, <span style="color:green">हरियो</span> बटन थिच्नुहोस्।
+			</p>
+			<p> 
+				यदि तपाईंले पानीको दबाब वा गुणस्तरको कमीको अनुभव गर्नुभयो भने, <span style="color:red">रातो</span> बटन थिच्नुहोस्।
+			</p>
+
+			<div id="buttons">
+				<button id="signalWG" class="tlight green"></button>
+				<button id="signalWR" class="tlight red"></button>
+			</div>
+
+			<div id="notLoggedIn">
+			</div>
+		</div>
+	</div>
+
+
+	<!--all modals-->
+
+
+	<div class="styled form" id="modalWR">
+		<span id="closeWR" class="close">&times;</span>
+		<!--<form id="WRForm" onsubmit="formSubmit(event, 'WRForm', 'modalWR', 'cbWR', 'sendWR')">-->
+		<form id="WRForm">
+			<!--
+			<div id="userInfo">
+				<fieldset>
+					<legend><span class="number">1</span> User Infomation</legend>
+					<input type="text" name="firstName" placeholder="Your Name *">
+				</fieldset>
+			</div>
+			-->
+			<fieldset>
+				<legend><span class="number">1</span> जल सेवा, रातो</legend>
+				<div id="intro">
+					<label class="question">तपाईं पानी आपूर्ति मा एक कट अनुभव गर्नुभयो?</label>
+					<div class="inputGroup">
+						<input id="waterCutY" name="waterCut" type="radio" value="yes" onchange="smartFormIntro()"/>
+						<label for="waterCutY">हो</label>
+					</div>
+					<div class="inputGroup"> 
+						<input id="waterCutN" name="waterCut" type="radio" value="no" onchange="smartFormIntro()"/>
+						<label for="waterCutN">नकार</label>
+					</div>
+					<br>
+					<div id="typeO">
+						<label class="question">पानी आपूर्ति संग समस्या के हो? (लागू हुने सबै चयन गर्नुहोस्)</label>
+						<div class="inputGroup">
+							<input id="reductionPressure" name="reductionPressure" type="checkbox" onchange="smartFormIntro()" value="yes">
+							<label for="reductionPressure">पानीको दबाबमा कमी</label>
+						</div>
+						<div class="inputGroup">
+							<input id="reductionQuality" name="reductionQuality" type="checkbox" onchange="smartFormIntro()" value="yes">
+							<label for="reductionQuality">कम पानी गुणस्तर</label>
+						</div>
+						<br>
+					</div>
+					<button id="loadNext" type="button" class="nextB">अर्को</button>
+				</div>
+				<div id="condO">
+					<label class="question">कुन तरिकामा कम गुणस्तरको पानी हो? (लागू हुने सबै चयन गर्नुहोस्)</label>
+					<div class="inputGroup">
+						<input id="taste" name="taste" type="checkbox" onchange="smartForm()" value="yes">
+						<label for="taste">स्वाद</label>
+					</div>
+					<div class="inputGroup">
+						<input id="smell" name="smell" type="checkbox" onchange="smartForm()" value="yes">
+						<label for="smell">गंध</label>
+					</div>
+					<div class="inputGroup">
+						<input id="appearance" name="appearance" type="checkbox" onchange="smartForm()" value="yes">
+						<label for="appearance">उपस्थिति</label>
+					</div>
+					<textarea rows="2" placeholder="यदि तपाईं चाहनुहुन्छ भने, यहाँ हामीलाई पानी गुणस्तर बारेमा थप बताउन" maxlength="300" name="comments"></textarea>
+					<br>
+				</div>
+				<div id="next">
+					<label class="question"> यो के समय सुरु गरे </label>
+					<input type="time" name="startTime" id="startTime" onchange="smartForm()">
+					<label class="question"> आफ्नो पानी आपूर्ति अब सामान्य काम गरिरहेको छ? </label>
+					<div class="inputGroup">
+						<input id="backyetY" name="backyet" type="radio" onchange="smartForm()"/ value="yes">
+						<label for="backyetY">हो</label>
+					</div>
+					<div class="inputGroup">
+						<input id="backyetN" name="backyet" type="radio" onchange="smartForm()"/ value="no">
+						<label for="backyetN">नकार</label>
+					</div>
+					<br>
+					<div id="timeBackQ">
+						<label class="question">के समय आफ्नो पानी आपूर्ति फेरि साधारण गर्नुभयो?</label>
+						<input type="time" name="timeBack" id="timeBack" onchange="smartForm()"> 
+					</div>
+				</div>
+				<div id="cbWR" class="hidden">
+					<legend><span class="number">2</span> सफलता!</legend>
+					<label class="question">तपाईको डाटा सफलतापूर्वक लगिएको छ!</label>
+				</div>
+			</fieldset>
+			<input type="hidden" name="ID" value="">
+			<input type="hidden" name="timestamp" id="timestamp" value="">
+			<input type="hidden" name="latitude" value="">
+			<input type="hidden" name="longitude" value="">
+			<input type="hidden" name="username" value="">
+			<input type="hidden" name="buttonPicked" value="waterRed">
+			<input type="hidden" name="application" value="android">
+			<input type="hidden" name="language" value="nepali">
+			<input type="submit" value="पेश गर्नुहोस्" id="sendWR"/>
+		</form>
+	</div>
+
+	<div class="styled form" id="modalWG">
+		<span id="closeWG" class="close">&times;</span>
+		<!--<form id="WGForm" onsubmit="formSubmit(event, 'WGForm', 'modalWG', 'cbWG', 'sendWG')">-->
+		<form id="WGForm">
+			<!--
+			<fieldset>
+				<legend><span class="number">1</span> User Infomation</legend>
+				<input type="text" name="firstName" placeholder="Your Name *">
+			</fieldset>
+			-->
+			<fieldset>
+				<legend><span class="number">1</span> पानीको सेवा, हरियो</legend>
+				<label class="question">कृपया तपाइँको अन्तिम लगको कारण एक निरन्तर पानी सेवा भएको पुष्टि गर्न पुष्टि गर्नुहोस्</label>
+				<div id="cbWG" class="hidden">
+					<br>
+					<legend><span class="number">2</span> सफलता!</legend>
+					<label class="question">तपाईको डाटा सफलतापूर्वक लगिएको छ!</label>
+				</div>
+			</fieldset>
+			<input type="hidden" name="ID" value="">
+			<input type="hidden" name="timestamp" id="timestamp" value="">
+			<input type="hidden" name="latitude" value="">
+			<input type="hidden" name="longitude" value="">
+			<input type="hidden" name="username" value="">
+			<input type="hidden" name="buttonPicked" value="waterGreen">
+			<input type="hidden" name="application" value="android">
+			<input type="hidden" name="language" value="nepali">
+			<input type="submit" value="पेश गर्नुहोस्" id="sendWG"/>
+		</form>
+	</div>
+
+	
+
+	<script type="text/javascript">
+        initialize();
+    </script>
+
+    <script type="text/javascript" src="../main.bundle.js"></script>
+
+</body>
+
+</html>
