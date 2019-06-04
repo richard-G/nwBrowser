@@ -23,28 +23,7 @@ module.exports = {
         hot: true
     },
     plugins: [
-        new CopyWebpackPlugin([
-            'index.html', 
-            {
-                from: 'js',
-                to: 'js'
-            },
-            {
-                from: 'css',
-                to: 'css'
-            },
-            {
-                from: 'img',
-                to: 'img'
-            },
-            {
-                from: 'pages',
-                to: 'pages'
-            },
-            {
-                from: 'favicons',
-                to: 'favicons'
-            },
+        new CopyWebpackPlugin([ 
             {
                 from: 'res',
                 to: 'res'

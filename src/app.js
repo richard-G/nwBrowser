@@ -204,9 +204,9 @@ const signUp = event => {
                 if (err.code === "UsernameExistsException") {
                     dialogue.innerHTML = "Username taken, please choose another";
                 } else if (err.code === "InvalidParameterException") {
-                    dialogue.innerHTML = "Please choose a password of 6 characters or more";
-                } else if (err = "Username cannot be empty") {
-                    dialogue.innerHTML = "Please choose a username";
+                    dialogue.innerHTML = "Please ensure your password is greater than 6 characters, and you have not used any spaces";
+                } else if (err.code = "InvalidPasswordException") {
+                    dialogue.innerHTML = "Please ensure your password is greater than 6 characters";
                 }
             });
     } else {
@@ -279,7 +279,11 @@ const getObject = () => {
     })
     .catch(err => {
         console.log(err);
-        welcome.innerHTML = "You are not logged in";
+        if (document.getElementById('nepali')) {
+            welcome.innerHTML = "तपाई लग इन हुनुहुन्न";
+        } else {
+            welcome.innerHTML = "You are not logged in";
+        }
     })
 }
 

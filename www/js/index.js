@@ -24,9 +24,16 @@ function onDeviceReady() {
 }*/ //removed for web app
 
 const createAccountPage = document.getElementById('createAccountPage');
-createAccountPage.addEventListener('click', () => {
-	location.href = 'pages/createAccount.html';
-});
+const nepali = document.getElementById('nepali');
+if (nepali) {
+	createAccountPage.addEventListener('click', () => {
+		location.href = 'createAccount_nep.html';
+	})
+} else {
+	createAccountPage.addEventListener('click', () => {
+		location.href = 'pages/createAccount.html';
+	})
+};
 
 const loginDiv = document.getElementById('loginDiv');
 const loginButton = document.getElementById('loginButton');
