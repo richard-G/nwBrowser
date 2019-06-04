@@ -3,7 +3,7 @@ var openWeb = () => {
 }
 	
 const openQ = () => {
-	cordova.InAppBrowser.open('https://imperial.eu.qualtrics.com/jfe/form/SV_0NUlFWS9PTRowxT', '_system', 'location=no');
+	cordova.InAppBrowser.open("https://imperial.eu.qualtrics.com/jfe/form/SV_acaqRDqpSGYKz4N", '_system', 'location=no');
 }
 
 const openFacebook = () => {
