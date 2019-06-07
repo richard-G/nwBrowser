@@ -39,12 +39,12 @@ var setupModal = function() {
         modalWR.style.display = "none";
         behind.style.opacity = "1";
         WRForm.reset();
-        resetModal();
     }
     closeWG.onclick = function() {
         modalWG.style.display = "none";
         behind.style.opacity = "1";
         WGForm.reset();
+        resetModal();
     }
 }
 
