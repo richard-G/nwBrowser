@@ -462,6 +462,9 @@ a {
     display: none;
 }
 
+.without::-webkit-datetime-edit-ampm-field {
+   display: none;
+ }
 
 /* fonts */
 

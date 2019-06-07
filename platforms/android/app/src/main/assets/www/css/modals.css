@@ -24,7 +24,7 @@
 	cursor: pointer;
 }
 
-#next, #condO, #typeO, #timeBackQ, #loadNext {
+#next, #condO, #typeO, #loadNext {
 	display: none;
 }
 /*
@@ -35,16 +35,7 @@
 	display: none;
 }
 */
-#sendWR {
+#sendWG {
 	display: none;
 }
 
-
-/* for power red */
-#timebackQER {
-	display: none;
-}
-
-#sendER {
-	display: none;
-}
