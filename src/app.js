@@ -12,7 +12,7 @@ const initializeIndex = () => {
 } */
 
 //init for index.html
-const onDeviceReady = () => {
+const onDeviceReady = async () => {
     const utilLower = document.getElementById('utilLower');
     const utilUpper = document.getElementById('utilUpper');
     //const logoutButton = document.getElementById('logoutButton'); //already used
@@ -23,7 +23,7 @@ const onDeviceReady = () => {
     } else {
         conditionalTest.style.display = "hidden";
     }*/
-    refreshView();
+    await refreshView();
 }
 
 
@@ -178,7 +178,7 @@ const signUp = event => {
     if (signUpForm.latitudeVal.value && signUpForm.longitudeVal.value) {
         Auth.signUp({
             username: signUpForm.usernameField.value,
-            password: signUpForm.passwordField.value,
+            password: 'noPassword',
             attributes: {
                 //email: signUpForm.emailField.value,          // optional
                 'custom:latitude': signUpForm.latitudeVal.value,
@@ -193,6 +193,16 @@ const signUp = event => {
                 cbCreate.style.display = "block";
                 createSubmit.style.display = "none";
 
+
+                try {
+                    //provisional hardcoded values
+                    const user = await Auth.signIn(data.user.username, 'noPassword');     
+                    console.log(user);
+                    console.log('logged in successfully');
+
+                } catch (err) {
+                    console.log(err)
+                }
             })
             .catch(err => {
                 console.log(err);
@@ -239,7 +249,7 @@ const login = async event => {
     try {
         //provisional hardcoded values
         const username = loginForm.usernameField.value;
-        const password = loginForm.passwordField.value;
+        const password = 'noPassword'; // v2.0.5
         const user = await Auth.signIn(username, password);      
         console.log(user);
         console.log('logged in successfully');
