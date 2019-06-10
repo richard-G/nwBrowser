@@ -186,7 +186,7 @@ const signUp = event => {
             },
             validationData: []  //optional
             })
-            .then(data => {
+            .then(async data => {
                 console.log(data);
                 const cbCreate = document.getElementById('cbCreate');
                 const createSubmit = document.getElementById('createSubmit');
